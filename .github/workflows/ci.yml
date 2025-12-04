@@ -1,0 +1,98 @@
+name: Saleor CI Pipeline (Simplified)
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+env:
+  PYTHON_VERSION: '3.12'
+  POSTGRES_VERSION: '15'
+
+jobs:
+  test:
+    name: "🧪 Test Suite"
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:${{ env.POSTGRES_VERSION }}
+        env:
+          POSTGRES_USER: saleor
+          POSTGRES_PASSWORD: saleor
+          POSTGRES_DB: saleor
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libpq-dev build-essential
+    
+    - name: Install Python dependencies
+      run: |
+        pip install --upgrade pip setuptools wheel
+        pip install .
+        pip install pytest pytest-django pytest-cov pytest-xdist
+    
+    - name: Run migrations
+      env:
+        DATABASE_URL: postgres://saleor:saleor@localhost:5432/saleor
+        SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY || 'test-secret-key-for-ci' }}
+        DEBUG: "true"
+        ALLOWED_HOSTS: localhost,127.0.0.1
+        REDIS_URL: redis://localhost:6379/0
+        EMAIL_URL: console://
+      run: |
+        python manage.py migrate --noinput
+    
+    - name: Run tests with coverage
+      env:
+        DATABASE_URL: postgres://saleor:saleor@localhost:5432/saleor
+        SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY || 'test-secret-key-for-ci' }}
+        DEBUG: "true"
+        ALLOWED_HOSTS: localhost,127.0.0.1
+        REDIS_URL: redis://localhost:6379/0
+        EMAIL_URL: console://
+      run: |
+        pytest tests/ -v \
+          --cov=saleor \
+          --cov-report=xml \
+          --cov-report=html \
+          --cov-report=term \
+          --override-ini="addopts="
+    
+    - name: Upload coverage reports
+      uses: codecov/codecov-action@v4
+      if: always()
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: |
+          coverage.xml
+          htmlcov/
+        retention-days: 30
