@@ -137,7 +137,7 @@ GitHub Repository
 | Secret Name | Required? | Value | Purpose |
 |------------|-----------|-------|---------|
 | `CYPRESS_RECORD_KEY` | ✅ **Required** | `8d5f0fe8-0c32-4259-8073-86ef9b7ac337` | Cypress test recording |
-| `DOCKER_HUB_TOKEN` | ✅ **Required** | `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY` | Docker Hub authentication |
+| `DOCKER_HUB_TOKEN` | ✅ **Required** | `[YOUR_DOCKER_HUB_TOKEN]` | Docker Hub authentication |
 
 ### **Optional Secrets:**
 

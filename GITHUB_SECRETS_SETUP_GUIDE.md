@@ -80,9 +80,9 @@ Your Docker Hub username is: **`haroon5295`**
 
 ### **DOCKER_HUB_TOKEN**
 
-Your Docker Hub personal access token is: **`dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY`**
+Your Docker Hub personal access token: **`[YOUR_DOCKER_HUB_TOKEN]`**
 
-(You already provided this earlier)
+⚠️ **Important:** Replace `[YOUR_DOCKER_HUB_TOKEN]` with your actual Docker Hub token.
 
 **⚠️ Important:** If you need to generate a new token:
 
@@ -136,7 +136,7 @@ Your Cypress record key is: **`8d5f0fe8-0c32-4259-8073-86ef9b7ac337`**
 
    **Secret 3: DOCKER_HUB_TOKEN**
    - Name: `DOCKER_HUB_TOKEN`
-   - Value: `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY`
+   - Value: `[YOUR_DOCKER_HUB_TOKEN]` (replace with your actual token)
    - Click "Add secret"
 
    **Secret 4: CYPRESS_RECORD_KEY (Optional)**
@@ -154,7 +154,7 @@ If you have GitHub CLI installed:
 # Set secrets via CLI
 gh secret set DJANGO_SECRET_KEY --body "YOUR_SECRET_KEY_HERE"
 gh secret set DOCKER_HUB_USERNAME --body "haroon5295"
-gh secret set DOCKER_HUB_TOKEN --body "dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY"
+gh secret set DOCKER_HUB_TOKEN --body "[YOUR_DOCKER_HUB_TOKEN]"
 gh secret set CYPRESS_RECORD_KEY --body "8d5f0fe8-0c32-4259-8073-86ef9b7ac337"
 ```
 
@@ -223,7 +223,7 @@ Then check:
 |------------|-------|----------|--------|
 | `DJANGO_SECRET_KEY` | Generate with Python | ✅ Yes | See Step 1 |
 | `DOCKER_HUB_USERNAME` | `haroon5295` | ✅ Yes | You provided |
-| `DOCKER_HUB_TOKEN` | `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY` | ✅ Yes | You provided |
+| `DOCKER_HUB_TOKEN` | `[YOUR_DOCKER_HUB_TOKEN]` | ✅ Yes | Your Docker Hub token |
 | `CYPRESS_RECORD_KEY` | `8d5f0fe8-0c32-4259-8073-86ef9b7ac337` | ⚠️ Optional | You provided |
 
 ---

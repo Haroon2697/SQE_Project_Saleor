@@ -13,7 +13,7 @@ You need to add **2 secrets** to your GitHub repository:
 | Secret Name | Value | Purpose |
 |------------|-------|---------|
 | `CYPRESS_RECORD_KEY` | `8d5f0fe8-0c32-4259-8073-86ef9b7ac337` | Cypress test recording |
-| `DOCKER_HUB_TOKEN` | `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY` | Docker Hub authentication |
+| `DOCKER_HUB_TOKEN` | `[YOUR_DOCKER_HUB_TOKEN]` | Docker Hub authentication |
 
 ---
 
@@ -46,7 +46,7 @@ https://github.com/Haroon2697/SQE_Project_Saleor/settings/secrets/actions
 
 1. Click **"New repository secret"** again
 2. **Name:** `DOCKER_HUB_TOKEN`
-3. **Secret:** `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY`
+3. **Secret:** `[YOUR_DOCKER_HUB_TOKEN]` (replace with your actual token)
 4. Click **"Add secret"**
 
 ---
@@ -93,7 +93,7 @@ env:
 
 **Docker Hub Details:**
 - Username: `haroon5295`
-- Token: `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY`
+- Token: `[YOUR_DOCKER_HUB_TOKEN]` (replace with your actual token)
 - Permissions: Read & Write
 - Expires: Jan 03, 2026
 
@@ -120,7 +120,7 @@ Value: 8d5f0fe8-0c32-4259-8073-86ef9b7ac337
 
 ```
 Name: DOCKER_HUB_TOKEN
-Value: dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY
+Value: [YOUR_DOCKER_HUB_TOKEN] (replace with your actual token)
 ```
 
 ---
@@ -171,7 +171,7 @@ GitHub Repository
 - [ ] Opened GitHub repository settings
 - [ ] Went to Secrets and variables → Actions
 - [ ] Added `CYPRESS_RECORD_KEY` with value `8d5f0fe8-0c32-4259-8073-86ef9b7ac337`
-- [ ] Added `DOCKER_HUB_TOKEN` with value `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY`
+- [ ] Added `DOCKER_HUB_TOKEN` with your Docker Hub token
 - [ ] Verified both secrets appear in the list
 - [ ] (Optional) Added `DJANGO_SECRET_KEY` if desired
 

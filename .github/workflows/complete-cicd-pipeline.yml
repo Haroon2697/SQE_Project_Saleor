@@ -44,7 +44,7 @@ env:
   POSTGRES_VERSION: '15'
   REDIS_VERSION: '7'
   DOCKER_REGISTRY: 'docker.io'
-  DOCKER_USERNAME: 'haroon5295'
+  DOCKER_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
   PROJECT_NAME: 'saleor'
 
 # ============================================

@@ -214,7 +214,7 @@ Add these secrets to your GitHub repository:
    - Used in: Build, staging, deploy stages
 
 3. **`DOCKER_HUB_TOKEN`** - Docker Hub personal access token
-   - Value: `dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY`
+   - Value: `[YOUR_DOCKER_HUB_TOKEN]` (replace with your actual token)
    - Used in: Build, staging, deploy stages
 
 ### **Optional Secrets:**

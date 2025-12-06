@@ -22,7 +22,7 @@ Value: 8d5f0fe8-0c32-4259-8073-86ef9b7ac337
 
 ```
 Name: DOCKER_HUB_TOKEN
-Value: dckr_pat_9MKc91ToLqs5pq-m70bH-taozpY
+Value: [YOUR_DOCKER_HUB_TOKEN] (replace with your actual token)
 ```
 
 **Purpose:** Docker Hub authentication for pushing images  
