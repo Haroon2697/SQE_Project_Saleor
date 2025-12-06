@@ -1,6 +1,73 @@
-.*
-**/*.pyc
-*.sqlite
-media
-node_modules
-static
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+.cypress.env.json
+
+# Dashboard
+dashboard/node_modules/
+dashboard/.next/
+dashboard/dist/
+dashboard/build/
+dashboard/.pnpm-store/
+dashboard/.cache/
+
+# Test files
+tests/
+*.test.py
+*.spec.js
+
+# Documentation
+*.md
+docs/
+
+# CI/CD
+.github/

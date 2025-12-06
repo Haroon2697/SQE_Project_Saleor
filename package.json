@@ -16,10 +16,17 @@
   },
   "homepage": "http://saleor.io/",
   "devDependencies": {
+    "@cypress/github-action": "^6.10.4",
     "@release-it/bumper": "^7.0.5",
+    "cypress": "^15.7.1",
     "release-it": "^19.0.4"
   },
   "scripts": {
-    "release": "release-it"
+    "release": "release-it",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:record": "cypress run --record --key $CYPRESS_RECORD_KEY",
+    "test:cypress": "cypress run",
+    "test:cypress:record": "cypress run --record"
   }
 }

@@ -1,36 +1,57 @@
-*.py[cod]
-.*
-!.devcontainer
-!.dockerignore
-!.github
-!.gitignore
-!.vscode
-*.log
-*.pot
-*.pyc
-local_settings.py
-.release_changelog.txt
-.base_ver_release.txt
-__pycache__/
-build/
-coverage/
-dist/
-*\.egg*
-# data
-/media/
-/node_modules/
-/static/
-/digital_contents/
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-Pipfile
-!.env.example
+# Cypress
+cypress/videos/
+cypress/screenshots/
+.cypress.env.json
 
-# Exported results file
-django-queries-results.html
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Dashboard (Frontend)
+dashboard/node_modules/
+dashboard/.next/
+dashboard/dist/
+dashboard/build/
+dashboard/.pnpm-store/
+dashboard/.cache/
+dashboard/.vite/
+dashboard/coverage/
