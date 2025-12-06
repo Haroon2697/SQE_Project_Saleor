@@ -1,4 +1,4 @@
-name: Complete CI/CD Pipeline - 5 Stages
+name: 🚀 Complete CI/CD Pipeline - 5 Stages
 
 # ============================================
 # STAGE 1: SOURCE STAGE
@@ -10,15 +10,8 @@ name: Complete CI/CD Pipeline - 5 Stages
 on:
   push:
     branches: [ main, master, develop ]
-    paths:
-      - '**.py'
-      - '**.js'
-      - '**.ts'
-      - '**.json'
-      - 'requirements.txt'
-      - 'package.json'
-      - 'Dockerfile'
-      - '.github/workflows/**'
+    # Removed path filters to trigger on all pushes
+    # This ensures the 5-stage pipeline runs on every commit
   pull_request:
     branches: [ main, master, develop ]
     types: [opened, synchronize, reopened]
