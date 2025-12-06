@@ -210,12 +210,25 @@ jobs:
         else
           echo "⚠️ Dockerfile not found, creating basic Dockerfile..."
           cat > Dockerfile << 'EOF'
-          FROM python:3.12-slim
+          FROM python:3.12-slim AS builder
           WORKDIR /app
-          COPY pyproject.toml ./
+          RUN apt-get update && apt-get install -y \
+              gcc g++ libpq-dev curl \
+              && rm -rf /var/lib/apt/lists/*
+          COPY pyproject.toml README.md* ./
+          COPY saleor/ ./saleor/
+          COPY manage.py ./
           RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
               pip install --no-cache-dir .
+          FROM python:3.12-slim
+          WORKDIR /app
+          RUN apt-get update && apt-get install -y \
+              libpq5 curl \
+              && rm -rf /var/lib/apt/lists/*
+          COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
+          COPY --from=builder /usr/local/bin /usr/local/bin
           COPY . .
+          RUN python manage.py collectstatic --noinput || echo "Static files collection skipped"
           EXPOSE 8000
           CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
           EOF

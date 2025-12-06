@@ -1,6 +1,6 @@
 # Multi-stage Dockerfile for Saleor
 # Stage 1: Builder
-FROM python:3.12-slim as builder
+FROM python:3.12-slim AS builder
 
 WORKDIR /app
 
@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y \
 
 # Copy project files for dependency installation
 COPY pyproject.toml ./
+COPY README.md* ./
+COPY saleor/ ./saleor/
+COPY manage.py ./
 
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
