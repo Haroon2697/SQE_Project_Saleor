@@ -222,12 +222,17 @@ jobs:
       if: |
         github.event_name == 'push' && 
         (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+      continue-on-error: true
       run: |
         DOCKER_USER="${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}"
-        echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${DOCKER_USER} --password-stdin
-        docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}:${{ github.sha }}
-        docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}:latest
-        echo "✅ Docker image pushed to registry"
+        if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
+          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u ${DOCKER_USER} --password-stdin
+          docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}:${{ github.sha }}
+          docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}:latest
+          echo "✅ Docker image pushed to registry"
+        else
+          echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker push"
+        fi
     
     - name: "💾 Build - Save Artifacts"
       if: always()
@@ -536,7 +541,7 @@ jobs:
       continue-on-error: true
       run: |
         if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }} --password-stdin
+          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }} --password-stdin
         else
           echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker login"
         fi
@@ -638,7 +643,7 @@ jobs:
       continue-on-error: true
       run: |
         if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }} --password-stdin
+          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }} --password-stdin
         else
           echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker login"
         fi
