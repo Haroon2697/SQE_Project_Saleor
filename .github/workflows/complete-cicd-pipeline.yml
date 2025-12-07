@@ -164,6 +164,12 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
     
+    - name: "📦 Install pnpm (for dashboard)"
+      if: matrix.test-type == 'ui'
+      run: |
+        npm install -g pnpm || echo "pnpm installation failed, will use npm"
+        pnpm --version || echo "pnpm not available"
+    
     - name: "📦 Build - Install Node.js Dependencies"
       run: |
         # Install Cypress dependencies from root package.json
@@ -429,6 +435,12 @@ jobs:
         # Setup Node.js for Cypress (use setup-node action instead of curl)
         # Node.js should already be set up in previous steps
         
+        # Install pnpm if not available (dashboard uses pnpm)
+        if ! command -v pnpm &> /dev/null; then
+          echo "Installing pnpm..."
+          npm install -g pnpm || echo "pnpm installation failed, will use npm"
+        fi
+        
         # Install Cypress dependencies
         if [ -f "package.json" ]; then
           echo "Installing dependencies from package.json..."
@@ -474,23 +486,105 @@ jobs:
         if [ -d "dashboard" ] && [ -f "dashboard/package.json" ]; then
           echo "Starting dashboard..."
           cd dashboard
-          npm run dev > ../dashboard.log 2>&1 &
-          DASHBOARD_PID=$!
-          cd ..
           
-          # Wait for dashboard (max 30 seconds)
-          for i in $(seq 1 30); do
-            if curl -f http://localhost:9000/ > /dev/null 2>&1; then
-              echo "✅ Dashboard is ready!"
-              break
+          # Install dependencies if not already installed
+          if [ ! -d "node_modules" ]; then
+            echo "Installing dashboard dependencies..."
+            if command -v pnpm &> /dev/null; then
+              echo "Using pnpm to install dashboard dependencies..."
+              pnpm install --frozen-lockfile || pnpm install || echo "pnpm install failed, trying npm..."
+              if [ $? -ne 0 ]; then
+                npm install || echo "Dashboard dependencies installation failed"
+              fi
+            else
+              echo "Using npm to install dashboard dependencies..."
+              npm install || echo "Dashboard dependencies installation failed"
             fi
-            if [ $i -eq 30 ]; then
-              echo "⚠️ Dashboard did not start in time, continuing without it"
-              break
+          else
+            echo "Dashboard dependencies already installed"
+          fi
+          
+          # Run predev script to generate GraphQL code (required by dashboard)
+          echo "Running dashboard predev (GraphQL code generation)..."
+          if command -v pnpm &> /dev/null; then
+            pnpm run generate || echo "GraphQL generation failed, continuing..."
+          else
+            npm run generate || echo "GraphQL generation failed, continuing..."
+          fi
+          
+          # Set environment variables for dashboard
+          export API_URL=http://localhost:8000/graphql/
+          export APP_MOUNT_URI=/dashboard/
+          export SALEOR_API_URL=http://localhost:8000/graphql/
+          
+          # Start dashboard with explicit port and host
+          echo "Starting dashboard on port 9000..."
+          if command -v pnpm &> /dev/null; then
+            echo "Using pnpm to start dashboard..."
+            pnpm dev --host > ../dashboard.log 2>&1 &
+          else
+            echo "Using npm to start dashboard..."
+            npm run dev -- --host > ../dashboard.log 2>&1 &
+          fi
+          DASHBOARD_PID=$!
+          echo "Dashboard PID: $DASHBOARD_PID"
+          
+          # Give dashboard a moment to start
+          sleep 5
+          
+          # Verify process is running
+          if ! ps -p $DASHBOARD_PID > /dev/null 2>&1; then
+            echo "⚠️ Dashboard process died immediately"
+            echo "Dashboard log:"
+            cat ../dashboard.log || echo "No log found"
+            cd ..
+          else
+            echo "✅ Dashboard process is running (PID: $DASHBOARD_PID)"
+            cd ..
+            
+            # Wait for dashboard (max 120 seconds - dashboard takes longer to start)
+            echo "Waiting for dashboard to be accessible on http://localhost:9000..."
+            DASHBOARD_READY=false
+            for i in $(seq 1 120); do
+              # Check if process is still running
+              if ! ps -p $DASHBOARD_PID > /dev/null 2>&1; then
+                echo "⚠️ Dashboard process stopped (iteration $i)"
+                echo "Dashboard log (last 100 lines):"
+                tail -100 dashboard.log || echo "No dashboard log found"
+                break
+              fi
+              
+              # Check if dashboard is accessible
+              if curl -f http://localhost:9000/ > /dev/null 2>&1; then
+                echo "✅ Dashboard is ready and accessible!"
+                DASHBOARD_READY=true
+                break
+              fi
+              
+              if [ $i -eq 120 ]; then
+                echo "⚠️ Dashboard did not become accessible in time (120 seconds)"
+                echo "Dashboard process status:"
+                ps aux | grep -E "(vite|node.*dashboard|pnpm)" | grep -v grep || echo "No dashboard process found"
+                echo "Dashboard log (last 100 lines):"
+                tail -100 dashboard.log || echo "No dashboard log found"
+                echo "Checking port 9000:"
+                netstat -tuln | grep 9000 || lsof -i :9000 || echo "Port 9000 not in use"
+                break
+              fi
+              
+              if [ $((i % 10)) -eq 0 ]; then
+                echo "Still waiting... ($i/120) - Dashboard process: $(ps -p $DASHBOARD_PID > /dev/null 2>&1 && echo 'running' || echo 'stopped')"
+              fi
+              sleep 2
+            done
+            
+            if [ "$DASHBOARD_READY" = "false" ]; then
+              echo "⚠️ Dashboard not ready, but continuing with Cypress tests..."
+              echo "Cypress will attempt to connect and may fail"
             fi
-            echo "Waiting for dashboard... ($i/30)"
-            sleep 2
-          done
+          fi
+        else
+          echo "⚠️ Dashboard directory not found, skipping dashboard startup"
         fi
         
         # Run Cypress tests
