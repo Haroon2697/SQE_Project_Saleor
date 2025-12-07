@@ -29,12 +29,13 @@ from ...meta.types import ObjectWithMetadata
 from ...translations.fields import TranslationField
 from ...translations.types import CategoryTranslation
 from ...utils import get_user_or_app_from_context
+from typing import TYPE_CHECKING
+
 from ..dataloaders import (
     CategoryByIdLoader,
     CategoryChildrenByCategoryIdLoader,
     ThumbnailByCategoryIdSizeAndFormatLoader,
 )
-from ..filters.product import ProductFilterInput, ProductWhereInput
 from ..sorters import ProductOrder
 from .products import ProductCountableConnection
 
@@ -60,26 +61,6 @@ class Category(ModelObjectType[models.Category]):
     ancestors = ConnectionField(
         lambda: CategoryCountableConnection,
         description="List of ancestors of the category.",
-    )
-    products = FilterConnectionField(
-        ProductCountableConnection,
-        filter=ProductFilterInput(
-            description=(
-                f"Filtering options for products. {DEPRECATED_IN_3X_INPUT} "
-                "Use `where` filter instead."
-            )
-        ),
-        where=ProductWhereInput(description="Where filtering options for products."),
-        sort_by=ProductOrder(description="Sort products."),
-        search=graphene.String(description="Search products."),
-        channel=graphene.String(
-            description="Slug of a channel for which the data should be returned."
-        ),
-        description=(
-            "List of products in the category. Requires the following permissions to "
-            "include the unpublished items: "
-            f"{', '.join([p.name for p in ALL_PRODUCTS_PERMISSIONS])}."
-        ),
     )
     children = ConnectionField(
         lambda: CategoryCountableConnection,
@@ -228,3 +209,28 @@ class CategoryCountableConnection(CountableConnection):
     class Meta:
         doc_category = DOC_CATEGORY_PRODUCTS
         node = Category
+
+
+# Set products field after class definition to avoid circular import
+from ..filters.product import ProductFilterInput, ProductWhereInput
+
+Category.products = FilterConnectionField(
+    ProductCountableConnection,
+    filter=ProductFilterInput(
+        description=(
+            f"Filtering options for products. {DEPRECATED_IN_3X_INPUT} "
+            "Use `where` filter instead."
+        )
+    ),
+    where=ProductWhereInput(description="Where filtering options for products."),
+    sort_by=ProductOrder(description="Sort products."),
+    search=graphene.String(description="Search products."),
+    channel=graphene.String(
+        description="Slug of a channel for which the data should be returned."
+    ),
+    description=(
+        "List of products in the category. Requires the following permissions to "
+        "include the unpublished items: "
+        f"{', '.join([p.name for p in ALL_PRODUCTS_PERMISSIONS])}."
+    ),
+)

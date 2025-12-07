@@ -1,0 +1,1085 @@
+saleor / __init__.py                                            16     4     0   7500%
+saleor / __main__.py                                             4     4     0      0%
+saleor / account / __init__.py                                  17     0     0  10000%
+saleor / account / apps.py                                       8     0     0  10000%
+saleor / account / error_codes.py                               62     0     0  10000%
+saleor / account / events.py                                    32    14     0   5625%
+saleor / account / forms.py                                     20    17     0   1500%
+saleor / account / i18n.py                                     180    88     0   5111%
+saleor / account / i18n_rules_override.py                       12     0     0  10000%
+saleor / account / i18n_valid_address_extension.py               8     0     0  10000%
+saleor / account / lock_objects.py                               3     1     0   6667%
+saleor / account / models.py                                   201    48     0   7612%
+saleor / account / notifications.py                             72    52     0   2778%
+saleor / account / search.py                                    45    26     2   4222%
+saleor / account / signals.py                                    4     2     0   5000%
+saleor / account / tasks.py                                     58    35     0   3966%
+saleor / account / throttling.py                                70    47     0   3286%
+saleor / account / utils.py                                    119    65     3   4538%
+saleor / account / validators.py                                 9     4     0   5556%
+saleor / account / widgets.py                                   10     5     0   5000%
+saleor / app / __init__.py                                       0     0     0  10000%
+saleor / app / apps.py                                           9     0     0  10000%
+saleor / app / error_codes.py                                   17     0     0  10000%
+saleor / app / headers.py                                       10     0     0  10000%
+saleor / app / installation_utils.py                           169   116     0   3136%
+saleor / app / manifest_validations.py                         247   203     0   1781%
+saleor / app / models.py                                       114    41     0   6404%
+saleor / app / signals.py                                        4     2     0   5000%
+saleor / app / tasks.py                                         75    53     0   2933%
+saleor / app / types.py                                         66     0     0  10000%
+saleor / app / utils.py                                          8     5     0   3750%
+saleor / app / validators.py                                    49    20     0   5918%
+saleor / asgi / __init__.py                                     22     0     0  10000%
+saleor / asgi / asgi_handler.py                                 54    42     0   2222%
+saleor / asgi / cors_handler.py                                 41    35     0   1463%
+saleor / asgi / gzip_compression.py                             80    74     0    750%
+saleor / asgi / health_check.py                                  9     5     0   4444%
+saleor / asgi / telemetry.py                                    13     7     0   4615%
+saleor / attribute / __init__.py                                30     0     0  10000%
+saleor / attribute / error_codes.py                             28     0     0  10000%
+saleor / attribute / lock_objects.py                             8     3     0   6250%
+saleor / attribute / models / __init__.py                        5     0     0  10000%
+saleor / attribute / models / base.py                          264   139     4   4735%
+saleor / attribute / models / page.py                           23     2     0   9130%
+saleor / attribute / models / product.py                        23     2     0   9130%
+saleor / attribute / models / product_variant.py                30     2     0   9333%
+saleor / attribute / search.py                                  29    21     0   2759%
+saleor / attribute / utils.py                                  100    86     0   1400%
+saleor / auth / __init__.py                                      0     0     0  10000%
+saleor / celeryconf.py                                          22     3     0   8636%
+saleor / channel / __init__.py                                  12     0     0  10000%
+saleor / channel / error_codes.py                               11     0     0  10000%
+saleor / channel / exceptions.py                                10     6     0   4000%
+saleor / channel / models.py                                    37     0     0  10000%
+saleor / channel / tasks / __init__.py                           0     0     0  10000%
+saleor / channel / tasks / saleor3_22.py                         7     7     0      0%
+saleor / channel / utils.py                                     21    15     0   2857%
+saleor / checkout / __init__.py                                 17     0     0  10000%
+saleor / checkout / actions.py                                 101    10     4   9010%
+saleor / checkout / base_calculations.py                       107    55     3   4860%
+saleor / checkout / calculations.py                            262   148     4   4351%
+saleor / checkout / checkout_cleaner.py                         64    42     2   3438%
+saleor / checkout / complete_checkout.py                       628   531     6   1545%
+saleor / checkout / error_codes.py                              62     0     0  10000%
+saleor / checkout / fetch.py                                   325   201     7   3815%
+saleor / checkout / lock_objects.py                              6     1     0   8333%
+saleor / checkout / models.py                                  197    35     5   8223%
+saleor / checkout / payment_utils.py                            67    53     0   2090%
+saleor / checkout / problems.py                                 90    55     0   3889%
+saleor / checkout / tasks.py                                   102   102     0      0%
+saleor / checkout / utils.py                                   531   376     7   2919%
+saleor / core / __init__.py                                     27     0     0  10000%
+saleor / core / anonymize.py                                    23    20     0   1304%
+saleor / core / apps.py                                         26     5     0   8077%
+saleor / core / auth.py                                         11     1     0   9091%
+saleor / core / auth_backend.py                                 92    52     0   4348%
+saleor / core / context.py                                       8     4     0   5000%
+saleor / core / db / __init__.py                                 0     0     0  10000%
+saleor / core / db / connection.py                              58    15     0   7414%
+saleor / core / db / expressions.py                             46    35     0   2391%
+saleor / core / db / fields.py                                 121    10     2   9174%
+saleor / core / db / filters.py                                  8     4     0   5000%
+saleor / core / db / patch.py                                   19     0     0  10000%
+saleor / core / db_routers.py                                    6     0     0  10000%
+saleor / core / error_codes.py                                  25     0     0  10000%
+saleor / core / exceptions.py                                   69    32     4   5362%
+saleor / core / hashers.py                                      16    16     0      0%
+saleor / core / http_client.py                                   5     0     0  10000%
+saleor / core / jwt.py                                         101    67     0   3366%
+saleor / core / jwt_manager.py                                 127    39    10   6929%
+saleor / core / languages.py                                     1     0     0  10000%
+saleor / core / logging.py                                      34    22     0   3529%
+saleor / core / middleware.py                                   21     7     3   6667%
+saleor / core / models.py                                      145    28     1   8069%
+saleor / core / notification / __init__.py                       0     0     0  10000%
+saleor / core / notification / mutation_handler.py              16    12     0   2500%
+saleor / core / notification / utils.py                          8     3     0   6250%
+saleor / core / notification / validation.py                    28    14     0   5000%
+saleor / core / notify.py                                       35     2     0   9429%
+saleor / core / payments.py                                     33    10     3   6970%
+saleor / core / postgres.py                                     66    36     0   4545%
+saleor / core / prices.py                                       15     2     2   8667%
+saleor / core / pricing / __init__.py                            0     0     0  10000%
+saleor / core / pricing / interface.py                          23     3     7   8696%
+saleor / core / rlimit.py                                       24     6     0   7500%
+saleor / core / schedules.py                                    84    50     1   4048%
+saleor / core / search_tasks.py                                 79    33     0   5823%
+saleor / core / sqs.py                                          32    32     0      0%
+saleor / core / storages.py                                     39    39     0      0%
+saleor / core / tasks.py                                        54    23     0   5741%
+saleor / core / taxes.py                                        34     2     0   9412%
+saleor / core / telemetry / __init__.py                         33     4     0   8788%
+saleor / core / telemetry / metric.py                           87    13     0   8506%
+saleor / core / telemetry / saleor_attributes.py                19     0     0  10000%
+saleor / core / telemetry / trace.py                            69    14     0   7971%
+saleor / core / telemetry / utils.py                            86    33     0   6163%
+saleor / core / templatetags / __init__.py                       0     0     0  10000%
+saleor / core / templatetags / taxed_prices.py                  17    11     0   3529%
+saleor / core / tokens.py                                       10     3     0   7000%
+saleor / core / tracing.py                                      26    15     0   4231%
+saleor / core / transactions.py                                 15    10     0   3333%
+saleor / core / units.py                                        46     0     0  10000%
+saleor / core / utils / __init__.py                             72    30     4   5833%
+saleor / core / utils / anonymization.py                        46    31     3   3261%
+saleor / core / utils / batches.py                              10     8     0   2000%
+saleor / core / utils / cache.py                                15     2     0   8667%
+saleor / core / utils / country.py                              11     7     2   3636%
+saleor / core / utils / date_time.py                             5     3     0   4000%
+saleor / core / utils / draftjs.py                               9     8     0   1111%
+saleor / core / utils / editorjs.py                             82    66     8   1951%
+saleor / core / utils / events.py                               59    44     1   2542%
+saleor / core / utils / json_serializer.py                      18     7     0   6111%
+saleor / core / utils / lazyobjects.py                          20    14     0   3000%
+saleor / core / utils / metadata_manager.py                     43    22     0   4884%
+saleor / core / utils / promo_code.py                           24    12     0   5000%
+saleor / core / utils / text.py                                 13    11     0   1538%
+saleor / core / utils / translations.py                         26    11     2   5769%
+saleor / core / utils / update_mutation_manager.py              34    25     0   2647%
+saleor / core / utils / url.py                                  32    22     0   3125%
+saleor / core / utils / validators.py                           17     7     0   5882%
+saleor / core / views.py                                        10     1     0   9000%
+saleor / core / weight.py                                       19    11     0   4211%
+saleor / csv / __init__.py                                      12     0     0  10000%
+saleor / csv / error_codes.py                                    6     0     0  10000%
+saleor / csv / events.py                                        22     6     4   7273%
+saleor / csv / models.py                                        19     0     0  10000%
+saleor / csv / notifications.py                                 37    28     2   2432%
+saleor / csv / tasks.py                                         65    37     0   4308%
+saleor / csv / utils / __init__.py                               7     0     0  10000%
+saleor / csv / utils / export.py                               114    84     3   2632%
+saleor / csv / utils / product_headers.py                       52    39     0   2500%
+saleor / csv / utils / products_data.py                        217   168     2   2258%
+saleor / discount / __init__.py                                 43     0     2  10000%
+saleor / discount / error_codes.py                              59     0     0  10000%
+saleor / discount / events.py                                   26    12     0   5385%
+saleor / discount / interface.py                                53    18     3   6604%
+saleor / discount / models.py                                  289    70     4   7578%
+saleor / discount / tasks.py                                   172   111     2   3547%
+saleor / discount / utils / __init__.py                          0     0     0  10000%
+saleor / discount / utils / checkout.py                        125    45     2   6400%
+saleor / discount / utils / manual_discount.py                  27    16     0   4074%
+saleor / discount / utils / order.py                           194   144     2   2577%
+saleor / discount / utils / promotion.py                       345   272     5   2116%
+saleor / discount / utils / shared.py                           54    43     2   2037%
+saleor / discount / utils / voucher.py                         285   227     8   2035%
+saleor / giftcard / __init__.py                                 22     0     3  10000%
+saleor / giftcard / error_codes.py                              10     0     0  10000%
+saleor / giftcard / events.py                                   42    22     2   4762%
+saleor / giftcard / models.py                                   63     2     0   9683%
+saleor / giftcard / notifications.py                            15     7     2   5333%
+saleor / giftcard / search.py                                   43    29     0   3256%
+saleor / giftcard / tasks.py                                    28    28     0      0%
+saleor / giftcard / utils.py                                   118    79     7   3305%
+saleor / graphql / __init__.py                                   0     0     0  10000%
+saleor / graphql / account / __init__.py                         0     0     0  10000%
+saleor / graphql / account / bulk_mutations / __init__.py        5     0     0  10000%
+saleor / graphql / account / bulk_mutations / customer_bulk_delete.py    41     9     0   7805%
+saleor / graphql / account / bulk_mutations / customer_bulk_update.py   296   216     0   2703%
+saleor / graphql / account / bulk_mutations / staff_bulk_delete.py    51    21     0   5882%
+saleor / graphql / account / bulk_mutations / user_bulk_set_active.py    31     5     0   8387%
+saleor / graphql / account / dataloaders.py                     94    54     0   4255%
+saleor / graphql / account / enums.py                           26     1     0   9615%
+saleor / graphql / account / filters.py                        130    43     0   6692%
+saleor / graphql / account / i18n.py                            85    62     0   2706%
+saleor / graphql / account / mixins.py                          32    17     0   4688%
+saleor / graphql / account / mutations / __init__.py             0     0     0  10000%
+saleor / graphql / account / mutations / account / __init__.py    13     0     0  10000%
+saleor / graphql / account / mutations / account / account_address_create.py    61    23     0   6230%
+saleor / graphql / account / mutations / account / account_address_delete.py    17     0     0  10000%
+saleor / graphql / account / mutations / account / account_address_update.py    18     0     0  10000%
+saleor / graphql / account / mutations / account / account_delete.py    49    15     0   6939%
+saleor / graphql / account / mutations / account / account_register.py   145    81     0   4414%
+saleor / graphql / account / mutations / account / account_request_deletion.py    44    13     0   7045%
+saleor / graphql / account / mutations / account / account_set_default_address.py    42    12     0   7143%
+saleor / graphql / account / mutations / account / account_update.py    57    10     0   8246%
+saleor / graphql / account / mutations / account / base.py       7     0     0  10000%
+saleor / graphql / account / mutations / account / confirm_account.py    49    18     0   6327%
+saleor / graphql / account / mutations / account / confirm_email_change.py    61    24     0   6066%
+saleor / graphql / account / mutations / account / request_email_change.py    54    19     0   6481%
+saleor / graphql / account / mutations / account / send_confirmation_email.py    62    27     0   5645%
+saleor / graphql / account / mutations / account / utils.py      1     0     0  10000%
+saleor / graphql / account / mutations / authentication / __init__.py    13     0     0  10000%
+saleor / graphql / account / mutations / authentication / create_token.py    53    23     0   5660%
+saleor / graphql / account / mutations / authentication / deactivate_all_user_tokens.py    22     5     0   7727%
+saleor / graphql / account / mutations / authentication / external_authentication_url.py    22     3     0   8636%
+saleor / graphql / account / mutations / authentication / external_logout.py    22     3     0   8636%
+saleor / graphql / account / mutations / authentication / external_obtain_access_tokens.py    33     9     0   7273%
+saleor / graphql / account / mutations / authentication / external_refresh.py    33     9     0   7273%
+saleor / graphql / account / mutations / authentication / external_verify.py    26     4     0   8462%
+saleor / graphql / account / mutations / authentication / password_change.py    48    19     0   6042%
+saleor / graphql / account / mutations / authentication / refresh_token.py    72    39     0   4583%
+saleor / graphql / account / mutations / authentication / request_password_reset.py    52    22     0   5769%
+saleor / graphql / account / mutations / authentication / set_password.py    59    28     0   5254%
+saleor / graphql / account / mutations / authentication / utils.py    42    26     0   3810%
+saleor / graphql / account / mutations / authentication / verify_token.py    39    13     0   6667%
+saleor / graphql / account / mutations / base.py               261   145     0   4444%
+saleor / graphql / account / mutations / permission_group / __init__.py     4     0     0  10000%
+saleor / graphql / account / mutations / permission_group / permission_group_create.py   142    75     0   4718%
+saleor / graphql / account / mutations / permission_group / permission_group_delete.py    74    33     0   5541%
+saleor / graphql / account / mutations / permission_group / permission_group_update.py   170   101     0   4059%
+saleor / graphql / account / mutations / staff / __init__.py    13     0     0  10000%
+saleor / graphql / account / mutations / staff / address_create.py    53    19     0   6415%
+saleor / graphql / account / mutations / staff / address_delete.py    18     0     0  10000%
+saleor / graphql / account / mutations / staff / address_set_default.py    41    11     0   7317%
+saleor / graphql / account / mutations / staff / address_update.py    19     0     0  10000%
+saleor / graphql / account / mutations / staff / base.py         5     0     0  10000%
+saleor / graphql / account / mutations / staff / customer_create.py    79    37     0   5316%
+saleor / graphql / account / mutations / staff / customer_delete.py    34     5     0   8529%
+saleor / graphql / account / mutations / staff / customer_update.py    98    50     0   4898%
+saleor / graphql / account / mutations / staff / staff_create.py   144    76     0   4722%
+saleor / graphql / account / mutations / staff / staff_delete.py    36     9     0   7500%
+saleor / graphql / account / mutations / staff / staff_update.py   116    59     0   4914%
+saleor / graphql / account / mutations / staff / user_avatar_delete.py    25     5     0   8000%
+saleor / graphql / account / mutations / staff / user_avatar_update.py    34    10     0   7059%
+saleor / graphql / account / resolvers.py                      107    70     0   3458%
+saleor / graphql / account / schema.py                         126    20     0   8413%
+saleor / graphql / account / sorters.py                         42     3     0   9286%
+saleor / graphql / account / types.py                          496   218     0   5605%
+saleor / graphql / account / utils.py                          150   114     3   2400%
+saleor / graphql / api.py                                       58     3     0   9483%
+saleor / graphql / app / __init__.py                             0     0     0  10000%
+saleor / graphql / app / dataloaders / __init__.py               7     0     0  10000%
+saleor / graphql / app / dataloaders / app.py                   70    42     0   4000%
+saleor / graphql / app / dataloaders / app_extension.py         18     9     0   5000%
+saleor / graphql / app / dataloaders / app_tokens.py            11     5     0   5455%
+saleor / graphql / app / dataloaders / apps.py                  34    23     0   3235%
+saleor / graphql / app / dataloaders / thumbnail.py              7     0     0  10000%
+saleor / graphql / app / dataloaders / utils.py                 25     6     0   7600%
+saleor / graphql / app / enums.py                               32     2     0   9375%
+saleor / graphql / app / filters.py                             36    12     0   6667%
+saleor / graphql / app / mutations / __init__.py                14     0     0  10000%
+saleor / graphql / app / mutations / app_activate.py            29     7     0   7586%
+saleor / graphql / app / mutations / app_create.py              66    25     0   6212%
+saleor / graphql / app / mutations / app_deactivate.py          29     7     0   7586%
+saleor / graphql / app / mutations / app_delete.py              51    17     0   6667%
+saleor / graphql / app / mutations / app_delete_failed_installation.py    26     4     0   8462%
+saleor / graphql / app / mutations / app_fetch_manifest.py      65    31     0   5231%
+saleor / graphql / app / mutations / app_install.py             53    12     0   7736%
+saleor / graphql / app / mutations / app_reenable_sync_webhooks.py    41    10     0   7561%
+saleor / graphql / app / mutations / app_retry_install.py       43    12     0   7209%
+saleor / graphql / app / mutations / app_token_create.py        55    21     0   6182%
+saleor / graphql / app / mutations / app_token_delete.py        38    11     0   7105%
+saleor / graphql / app / mutations / app_token_verify.py        22     4     0   8182%
+saleor / graphql / app / mutations / app_update.py              50    16     0   6800%
+saleor / graphql / app / resolvers.py                           48    33     0   3125%
+saleor / graphql / app / schema.py                              82    26     0   6829%
+saleor / graphql / app / sorters.py                             18     1     0   9444%
+saleor / graphql / app / types.py                              363   120     0   6694%
+saleor / graphql / app / utils.py                               17    10     0   4118%
+saleor / graphql / attribute / __init__.py                       0     0     0  10000%
+saleor / graphql / attribute / bulk_mutations.py                96    45     0   5312%
+saleor / graphql / attribute / dataloaders / __init__.py         0     0     0  10000%
+saleor / graphql / attribute / dataloaders / assigned_attributes.py   363   299     0   1763%
+saleor / graphql / attribute / dataloaders / attributes.py      26    11     0   5769%
+saleor / graphql / attribute / dataloaders / reference_types.py    59    42     0   2881%
+saleor / graphql / attribute / descriptions.py                  33     0     0  10000%
+saleor / graphql / attribute / enums.py                         18     0     0  10000%
+saleor / graphql / attribute / filters.py                      182    61     1   6648%
+saleor / graphql / attribute / mutations / __init__.py          11     0     0  10000%
+saleor / graphql / attribute / mutations / attribute_bulk_create.py   268   201     0   2500%
+saleor / graphql / attribute / mutations / attribute_bulk_update.py   363   266     0   2672%
+saleor / graphql / attribute / mutations / attribute_create.py    96    23     0   7604%
+saleor / graphql / attribute / mutations / attribute_delete.py    64    24     0   6250%
+saleor / graphql / attribute / mutations / attribute_reorder_values.py    54    23     0   5741%
+saleor / graphql / attribute / mutations / attribute_update.py    95    28     0   7053%
+saleor / graphql / attribute / mutations / attribute_value_create.py    72    32     0   5556%
+saleor / graphql / attribute / mutations / attribute_value_delete.py    47    15     0   6809%
+saleor / graphql / attribute / mutations / attribute_value_update.py    69    23     0   6667%
+saleor / graphql / attribute / mutations / base_reorder_attributes.py    78    54     2   3077%
+saleor / graphql / attribute / mutations / mixins.py           142    99     0   3028%
+saleor / graphql / attribute / mutations / utils.py             19    13     0   3158%
+saleor / graphql / attribute / mutations / validators.py         7     3     0   5714%
+saleor / graphql / attribute / resolvers.py                      7     3     0   5714%
+saleor / graphql / attribute / schema.py                        47    10     0   7872%
+saleor / graphql / attribute / shared_filters.py               208   144     0   3077%
+saleor / graphql / attribute / sorters.py                       41     2     0   9512%
+saleor / graphql / attribute / types.py                        659   268     0   5933%
+saleor / graphql / attribute / unions.py                        17     5     0   7059%
+saleor / graphql / attribute / utils / __init__.py               0     0     0  10000%
+saleor / graphql / attribute / utils / attribute_assignment.py   165   118     2   2848%
+saleor / graphql / attribute / utils / shared.py               105    48     3   5429%
+saleor / graphql / attribute / utils / type_handlers.py        387   304     4   2145%
+saleor / graphql / channel / __init__.py                         0     0     0  10000%
+saleor / graphql / channel / dataloaders / __init__.py           0     0     0  10000%
+saleor / graphql / channel / dataloaders / by_checkout.py       15     7     0   5333%
+saleor / graphql / channel / dataloaders / by_order.py          23    10     0   5652%
+saleor / graphql / channel / dataloaders / by_self.py           12     4     0   6667%
+saleor / graphql / channel / dataloaders / by_transaction.py    30    20     0   3333%
+saleor / graphql / channel / enums.py                           11     0     0  10000%
+saleor / graphql / channel / filters.py                          6     4     0   3333%
+saleor / graphql / channel / mutations / __init__.py             8     0     0  10000%
+saleor / graphql / channel / mutations / base_channel_listing.py    63    41     0   3492%
+saleor / graphql / channel / mutations / channel_activate.py    36     9     0   7500%
+saleor / graphql / channel / mutations / channel_create.py     122    24     0   8033%
+saleor / graphql / channel / mutations / channel_deactivate.py    36     9     0   7500%
+saleor / graphql / channel / mutations / channel_delete.py      75    28     0   6267%
+saleor / graphql / channel / mutations / channel_reorder_warehouses.py    48    20     0   5833%
+saleor / graphql / channel / mutations / channel_update.py     129    71     0   4496%
+saleor / graphql / channel / mutations / utils.py               93    77     0   1720%
+saleor / graphql / channel / resolvers.py                       19    11     0   4211%
+saleor / graphql / channel / schema.py                          25     2     0   9200%
+saleor / graphql / channel / types.py                          147    50     2   6599%
+saleor / graphql / channel / utils.py                           64    47     0   2656%
+saleor / graphql / checkout / __init__.py                        0     0     0  10000%
+saleor / graphql / checkout / dataloaders / __init__.py          5     0     0  10000%
+saleor / graphql / checkout / dataloaders / checkout_delivery.py    17     7     0   5882%
+saleor / graphql / checkout / dataloaders / checkout_infos.py   119    95     0   2017%
+saleor / graphql / checkout / dataloaders / models.py           56    29     0   4821%
+saleor / graphql / checkout / dataloaders / problems.py         59    40     0   3220%
+saleor / graphql / checkout / dataloaders / promotion_rule_infos.py    57    45     0   2105%
+saleor / graphql / checkout / enums.py                          15     0     0  10000%
+saleor / graphql / checkout / filters.py                       105    53     0   4952%
+saleor / graphql / checkout / mutations / __init__.py           20     0     0  10000%
+saleor / graphql / checkout / mutations / checkout_add_promo_code.py    46    13     0   7174%
+saleor / graphql / checkout / mutations / checkout_billing_address_update.py    50    13     0   7400%
+saleor / graphql / checkout / mutations / checkout_complete.py   110    58     0   4727%
+saleor / graphql / checkout / mutations / checkout_create.py   203   105     3   4828%
+saleor / graphql / checkout / mutations / checkout_create_from_order.py   151    88     0   4172%
+saleor / graphql / checkout / mutations / checkout_customer_attach.py    57    20     0   6491%
+saleor / graphql / checkout / mutations / checkout_customer_detach.py    43    10     0   7674%
+saleor / graphql / checkout / mutations / checkout_customer_note_update.py    32     7     0   7812%
+saleor / graphql / checkout / mutations / checkout_delivery_method_update.py    87    45     2   4828%
+saleor / graphql / checkout / mutations / checkout_email_update.py    43    10     0   7674%
+saleor / graphql / checkout / mutations / checkout_language_code_update.py    36     6     0   8333%
+saleor / graphql / checkout / mutations / checkout_line_delete.py    46    14     0   6957%
+saleor / graphql / checkout / mutations / checkout_lines_add.py    98    44     0   5510%
+saleor / graphql / checkout / mutations / checkout_lines_delete.py    57    23     0   5965%
+saleor / graphql / checkout / mutations / checkout_lines_update.py    87    29     0   6667%
+saleor / graphql / checkout / mutations / checkout_remove_promo_code.py    78    35     0   5513%
+saleor / graphql / checkout / mutations / checkout_shipping_address_update.py    74    29     2   6081%
+saleor / graphql / checkout / mutations / checkout_shipping_method_update.py    71    33     0   5352%
+saleor / graphql / checkout / mutations / order_create_from_checkout.py    87    34     0   6092%
+saleor / graphql / checkout / mutations / utils.py             242   181     3   2521%
+saleor / graphql / checkout / resolvers.py                      40    25     0   3750%
+saleor / graphql / checkout / schema.py                         51     6     0   8824%
+saleor / graphql / checkout / sorters.py                        25     3     0   8800%
+saleor / graphql / checkout / types.py                         667   352     4   4723%
+saleor / graphql / checkout / utils.py                          18    10     0   4444%
+saleor / graphql / context.py                                   47     4     0   9149%
+saleor / graphql / core / __init__.py                            6     0     0  10000%
+saleor / graphql / core / connection.py                        343   269     2   2157%
+saleor / graphql / core / const.py                               1     0     0  10000%
+saleor / graphql / core / context.py                            49    10     4   7959%
+saleor / graphql / core / dataloaders.py                        63    23     1   6349%
+saleor / graphql / core / descriptions.py                       15     0     0  10000%
+saleor / graphql / core / doc_category.py                       19     0     0  10000%
+saleor / graphql / core / enums.py                             183     2     0   9891%
+saleor / graphql / core / federation / __init__.py               3     0     0  10000%
+saleor / graphql / core / federation / entities.py              15     0     0  10000%
+saleor / graphql / core / federation / resolvers.py              5     3     0   4000%
+saleor / graphql / core / federation / schema.py                87    38     0   5632%
+saleor / graphql / core / fields.py                             91     5     0   9451%
+saleor / graphql / core / filters / __init__.py                  6     0     0  10000%
+saleor / graphql / core / filters / filter_input.py             51     2     0   9608%
+saleor / graphql / core / filters / filters.py                  65    20     0   6923%
+saleor / graphql / core / filters / shared_filters.py           46    28     0   3913%
+saleor / graphql / core / filters / where_filters.py            93    34     0   6344%
+saleor / graphql / core / filters / where_input.py              76     0     0  10000%
+saleor / graphql / core / inputs.py                              4     0     0  10000%
+saleor / graphql / core / mutations.py                         592   327    76   4476%
+saleor / graphql / core / scalars.py                           149    93     0   3758%
+saleor / graphql / core / schema.py                             14     2     0   8571%
+saleor / graphql / core / tracing.py                            14     0     0  10000%
+saleor / graphql / core / types / __init__.py                    8     0     0  10000%
+saleor / graphql / core / types / base.py                       35     0     0  10000%
+saleor / graphql / core / types / common.py                    409    11     2   9731%
+saleor / graphql / core / types / context.py                    36    12     0   6667%
+saleor / graphql / core / types / converter.py                  43     2     0   9535%
+saleor / graphql / core / types / event.py                      17     0     1  10000%
+saleor / graphql / core / types / model.py                      45    15     0   6667%
+saleor / graphql / core / types / money.py                      59     7     0   8814%
+saleor / graphql / core / types / order_or_checkout.py          24     7     0   7083%
+saleor / graphql / core / types / sort_input.py                 30     0     0  10000%
+saleor / graphql / core / types / sync_webhook_control.py       19     2     0   8947%
+saleor / graphql / core / types / taxes.py                     231   128     0   4459%
+saleor / graphql / core / types / upload.py                     13     3     0   7692%
+saleor / graphql / core / types / user_or_app.py                15     5     0   6667%
+saleor / graphql / core / utils / __init__.py                   87    45    12   4828%
+saleor / graphql / core / utils / error_codes.py                14    10     0   2857%
+saleor / graphql / core / utils / reordering.py                 83    61     0   2651%
+saleor / graphql / core / utils / resolvers.py                  17    12     0   2941%
+saleor / graphql / core / validators / __init__.py              99    76     3   2323%
+saleor / graphql / core / validators / file.py                  54    38     0   2963%
+saleor / graphql / core / validators / query_cost.py           179    45     0   7486%
+saleor / graphql / csv / __init__.py                             0     0     0  10000%
+saleor / graphql / csv / dataloaders.py                         13     6     0   5385%
+saleor / graphql / csv / enums.py                               35     1     0   9714%
+saleor / graphql / csv / filters.py                             17     4     0   7647%
+saleor / graphql / csv / mutations / __init__.py                 4     0     0  10000%
+saleor / graphql / csv / mutations / base_export.py             32    15     0   5312%
+saleor / graphql / csv / mutations / export_gift_cards.py       41     8     0   8049%
+saleor / graphql / csv / mutations / export_products.py         72    23     0   6806%
+saleor / graphql / csv / mutations / export_voucher_codes.py    60    24     0   6000%
+saleor / graphql / csv / resolvers.py                            6     2     0   6667%
+saleor / graphql / csv / schema.py                              25     5     0   8000%
+saleor / graphql / csv / sorters.py                             23     2     0   9130%
+saleor / graphql / csv / types.py                               73    20     0   7260%
+saleor / graphql / decorators.py                                72    24     0   6667%
+saleor / graphql / discount / __init__.py                        0     0     0  10000%
+saleor / graphql / discount / dataloaders.py                   240   162     2   3250%
+saleor / graphql / discount / enums.py                          50     0     0  10000%
+saleor / graphql / discount / filters.py                       115    41     0   6435%
+saleor / graphql / discount / inputs.py                         37     0     0  10000%
+saleor / graphql / discount / mutations / __init__.py           21     0     0  10000%
+saleor / graphql / discount / mutations / bulk_mutations.py    102    43     0   5784%
+saleor / graphql / discount / mutations / promotion / __init__.py     0     0     0  10000%
+saleor / graphql / discount / mutations / promotion / promotion_bulk_delete.py    41    12     0   7073%
+saleor / graphql / discount / mutations / promotion / promotion_create.py   170    89     0   4765%
+saleor / graphql / discount / mutations / promotion / promotion_delete.py    41    12     0   7073%
+saleor / graphql / discount / mutations / promotion / promotion_rule_create.py    64    21     0   6719%
+saleor / graphql / discount / mutations / promotion / promotion_rule_delete.py    47    17     0   6383%
+saleor / graphql / discount / mutations / promotion / promotion_rule_update.py   105    51     0   5143%
+saleor / graphql / discount / mutations / promotion / promotion_update.py   104    54     0   4808%
+saleor / graphql / discount / mutations / promotion / validators.py   180   158     2   1222%
+saleor / graphql / discount / mutations / sale / __init__.py     0     0     0  10000%
+saleor / graphql / discount / mutations / sale / sale_add_catalogues.py    51    25     0   5098%
+saleor / graphql / discount / mutations / sale / sale_base_catalogue.py    72    40     0   4444%
+saleor / graphql / discount / mutations / sale / sale_channel_listing_update.py   151    89     0   4106%
+saleor / graphql / discount / mutations / sale / sale_create.py    96    37     0   6146%
+saleor / graphql / discount / mutations / sale / sale_delete.py    68    30     0   5588%
+saleor / graphql / discount / mutations / sale / sale_remove_catalogues.py    53    27     0   4906%
+saleor / graphql / discount / mutations / sale / sale_update.py   137    83     0   3942%
+saleor / graphql / discount / mutations / utils.py              39    27     0   3077%
+saleor / graphql / discount / mutations / voucher / __init__.py     0     0     0  10000%
+saleor / graphql / discount / mutations / voucher / voucher_add_catalogues.py    78    33     0   5769%
+saleor / graphql / discount / mutations / voucher / voucher_channel_listing_update.py   114    61     0   4649%
+saleor / graphql / discount / mutations / voucher / voucher_code_bulk_delete.py    57    25     0   5614%
+saleor / graphql / discount / mutations / voucher / voucher_create.py   150    75     0   5000%
+saleor / graphql / discount / mutations / voucher / voucher_delete.py    41    13     0   6829%
+saleor / graphql / discount / mutations / voucher / voucher_remove_catalogues.py    46    24     0   4783%
+saleor / graphql / discount / mutations / voucher / voucher_update.py    86    44     0   4884%
+saleor / graphql / discount / resolvers.py                      33    22     0   3333%
+saleor / graphql / discount / schema.py                         88    17     0   8068%
+saleor / graphql / discount / sorters.py                        93     9     0   9032%
+saleor / graphql / discount / types / __init__.py                5     0     0  10000%
+saleor / graphql / discount / types / discounts.py              56     8     0   8571%
+saleor / graphql / discount / types / promotion_events.py      105    20     0   8095%
+saleor / graphql / discount / types / promotions.py             81    10     0   8765%
+saleor / graphql / discount / types / sales.py                 124    47     0   6210%
+saleor / graphql / discount / types / vouchers.py              132    27     0   7955%
+saleor / graphql / discount / utils.py                         213   157     0   2629%
+saleor / graphql / error.py                                     19     1     0   9474%
+saleor / graphql / giftcard / __init__.py                        0     0     0  10000%
+saleor / graphql / giftcard / bulk_mutations / __init__.py       5     0     0  10000%
+saleor / graphql / giftcard / bulk_mutations / gift_card_bulk_activate.py    42    11     0   7381%
+saleor / graphql / giftcard / bulk_mutations / gift_card_bulk_create.py   102    44     0   5686%
+saleor / graphql / giftcard / bulk_mutations / gift_card_bulk_deactivate.py    35     9     0   7429%
+saleor / graphql / giftcard / bulk_mutations / gift_card_bulk_delete.py    29     6     0   7931%
+saleor / graphql / giftcard / dataloaders.py                    50    29     0   4200%
+saleor / graphql / giftcard / enums.py                           7     0     0  10000%
+saleor / graphql / giftcard / filters.py                       124    64     0   4839%
+saleor / graphql / giftcard / mutations / __init__.py            8     0     0  10000%
+saleor / graphql / giftcard / mutations / gift_card_activate.py    37    10     0   7297%
+saleor / graphql / giftcard / mutations / gift_card_add_note.py    47    12     0   7447%
+saleor / graphql / giftcard / mutations / gift_card_create.py   132    62     0   5303%
+saleor / graphql / giftcard / mutations / gift_card_deactivate.py    35     9     0   7429%
+saleor / graphql / giftcard / mutations / gift_card_delete.py    25     2     0   9200%
+saleor / graphql / giftcard / mutations / gift_card_resend.py    63    22     0   6508%
+saleor / graphql / giftcard / mutations / gift_card_update.py   108    57     0   4722%
+saleor / graphql / giftcard / mutations / utils.py               8     3     0   6250%
+saleor / graphql / giftcard / resolvers.py                       8     3     0   6250%
+saleor / graphql / giftcard / schema.py                         58    15     0   7414%
+saleor / graphql / giftcard / sorters.py                        20     1     0   9500%
+saleor / graphql / giftcard / types.py                         278   127     0   5432%
+saleor / graphql / graphql_core.py                              19     0     0  10000%
+saleor / graphql / invoice / __init__.py                         0     0     0  10000%
+saleor / graphql / invoice / dataloaders.py                     11     5     0   5455%
+saleor / graphql / invoice / mutations / __init__.py             7     0     0  10000%
+saleor / graphql / invoice / mutations / invoice_create.py      71    29     0   5915%
+saleor / graphql / invoice / mutations / invoice_delete.py      29     8     0   7241%
+saleor / graphql / invoice / mutations / invoice_request.py     54    19     0   6481%
+saleor / graphql / invoice / mutations / invoice_request_delete.py    34     9     0   7353%
+saleor / graphql / invoice / mutations / invoice_send_notification.py    52    20     0   6154%
+saleor / graphql / invoice / mutations / invoice_update.py      62    24     0   6129%
+saleor / graphql / invoice / schema.py                           9     0     0  10000%
+saleor / graphql / invoice / types.py                           24     3     0   8750%
+saleor / graphql / menu / __init__.py                            0     0     0  10000%
+saleor / graphql / menu / bulk_mutations / __init__.py           3     0     0  10000%
+saleor / graphql / menu / bulk_mutations / menu_bulk_delete.py    30     6     0   8000%
+saleor / graphql / menu / bulk_mutations / menu_item_bulk_delete.py    30     6     0   8000%
+saleor / graphql / menu / dataloaders.py                        29    14     0   5172%
+saleor / graphql / menu / enums.py                              11     1     0   9091%
+saleor / graphql / menu / filters.py                            30     3     0   9000%
+saleor / graphql / menu / mutations / __init__.py                9     0     0  10000%
+saleor / graphql / menu / mutations / assign_navigation.py      35    12     0   6571%
+saleor / graphql / menu / mutations / menu_create.py            76    36     0   5263%
+saleor / graphql / menu / mutations / menu_delete.py            30     4     0   8667%
+saleor / graphql / menu / mutations / menu_item_create.py       62    18     0   7097%
+saleor / graphql / menu / mutations / menu_item_delete.py       30     4     0   8667%
+saleor / graphql / menu / mutations / menu_item_move.py        104    54     0   4808%
+saleor / graphql / menu / mutations / menu_item_update.py       33     7     0   7879%
+saleor / graphql / menu / mutations / menu_update.py            34     4     0   8824%
+saleor / graphql / menu / resolvers.py                          23    14     0   3913%
+saleor / graphql / menu / schema.py                             57    18     0   6842%
+saleor / graphql / menu / sorters.py                            31     3     0   9032%
+saleor / graphql / menu / types.py                             117    42     0   6410%
+saleor / graphql / meta / __init__.py                            0     0     0  10000%
+saleor / graphql / meta / extra_methods.py                      51    31     0   3922%
+saleor / graphql / meta / inputs.py                              8     0     0  10000%
+saleor / graphql / meta / mutations / __init__.py                5     0     0  10000%
+saleor / graphql / meta / mutations / base.py                  168   105     1   3750%
+saleor / graphql / meta / mutations / delete_metadata.py        26     7     0   7308%
+saleor / graphql / meta / mutations / delete_private_metadata.py    24     7     0   7083%
+saleor / graphql / meta / mutations / update_metadata.py        28     8     0   7143%
+saleor / graphql / meta / mutations / update_private_metadata.py    27     9     0   6667%
+saleor / graphql / meta / mutations / utils.py                  33    21     0   3636%
+saleor / graphql / meta / permissions.py                       129    85     0   3411%
+saleor / graphql / meta / resolvers.py                          77    48     1   3766%
+saleor / graphql / meta / schema.py                              7     0     0  10000%
+saleor / graphql / meta / types.py                              57    23     0   5965%
+saleor / graphql / metrics.py                                   44     2     0   9545%
+saleor / graphql / middleware.py                                 4     4     0      0%
+saleor / graphql / notifications / __init__.py                   0     0     0  10000%
+saleor / graphql / notifications / error_codes.py                6     0     0  10000%
+saleor / graphql / notifications / mutations / __init__.py       0     0     0  10000%
+saleor / graphql / notifications / mutations / external_notification_trigger.py    42    16     0   6190%
+saleor / graphql / notifications / schema.py                     5     0     0  10000%
+saleor / graphql / order / __init__.py                           0     0     0  10000%
+saleor / graphql / order / bulk_mutations / __init__.py          0     0     0  10000%
+saleor / graphql / order / bulk_mutations / draft_orders.py     97    48     0   5052%
+saleor / graphql / order / bulk_mutations / order_bulk_cancel.py    36     6     0   8333%
+saleor / graphql / order / bulk_mutations / order_bulk_create.py  1052   668     0   3650%
+saleor / graphql / order / bulk_mutations / utils.py            28    22     0   2143%
+saleor / graphql / order / dataloaders.py                      125    68     0   4560%
+saleor / graphql / order / enums.py                             43     0     0  10000%
+saleor / graphql / order / filters.py                          531   259     0   5122%
+saleor / graphql / order / mutations / __init__.py               0     0     0  10000%
+saleor / graphql / order / mutations / draft_order_cleaner.py    63    52     0   1746%
+saleor / graphql / order / mutations / draft_order_complete.py   124    74     0   4032%
+saleor / graphql / order / mutations / draft_order_create.py   212   114     0   4623%
+saleor / graphql / order / mutations / draft_order_delete.py    56    18     0   6786%
+saleor / graphql / order / mutations / draft_order_update.py   198   125     0   3687%
+saleor / graphql / order / mutations / fulfillment_approve.py    62    22     0   6452%
+saleor / graphql / order / mutations / fulfillment_cancel.py    67    27     0   5970%
+saleor / graphql / order / mutations / fulfillment_refund_and_return_product_base.py    75    51     0   3200%
+saleor / graphql / order / mutations / fulfillment_refund_products.py    76    27     0   6447%
+saleor / graphql / order / mutations / fulfillment_return_products.py    87    33     0   6207%
+saleor / graphql / order / mutations / fulfillment_update_tracking.py    47    15     0   6809%
+saleor / graphql / order / mutations / order_cancel.py          42    13     0   6905%
+saleor / graphql / order / mutations / order_capture.py         52    19     0   6346%
+saleor / graphql / order / mutations / order_confirm.py         68    31     0   5441%
+saleor / graphql / order / mutations / order_discount_add.py    53    21     0   6038%
+saleor / graphql / order / mutations / order_discount_common.py    40    14     0   6500%
+saleor / graphql / order / mutations / order_discount_delete.py    43    15     0   6512%
+saleor / graphql / order / mutations / order_discount_update.py    58    26     0   5517%
+saleor / graphql / order / mutations / order_fulfill.py        130    58     0   5538%
+saleor / graphql / order / mutations / order_grant_refund_create.py   148    79     0   4662%
+saleor / graphql / order / mutations / order_grant_refund_update.py   202   128     0   3663%
+saleor / graphql / order / mutations / order_grant_refund_utils.py    52    41     0   2115%
+saleor / graphql / order / mutations / order_line_delete.py     65    31     0   5231%
+saleor / graphql / order / mutations / order_line_discount_remove.py    38    11     0   7105%
+saleor / graphql / order / mutations / order_line_discount_update.py    48    19     0   6042%
+saleor / graphql / order / mutations / order_line_update.py     65    27     0   5846%
+saleor / graphql / order / mutations / order_lines_create.py   122    71     0   4180%
+saleor / graphql / order / mutations / order_mark_as_paid.py    66    25     3   6212%
+saleor / graphql / order / mutations / order_note_add.py        56    10     0   8214%
+saleor / graphql / order / mutations / order_note_common.py     23     5     0   7826%
+saleor / graphql / order / mutations / order_note_update.py     43    11     0   7442%
+saleor / graphql / order / mutations / order_refund.py          57    23     0   5965%
+saleor / graphql / order / mutations / order_update.py         143    68     0   5245%
+saleor / graphql / order / mutations / order_update_shipping.py    61    25     0   5902%
+saleor / graphql / order / mutations / order_void.py            43    14     0   6744%
+saleor / graphql / order / mutations / utils.py                150    96     0   3600%
+saleor / graphql / order / resolvers.py                         82    61     0   2561%
+saleor / graphql / order / schema.py                           167    44     0   7365%
+saleor / graphql / order / sorters.py                           38     3     0   9211%
+saleor / graphql / order / types.py                           1407   813     0   4222%
+saleor / graphql / order / utils.py                            137    93     3   3212%
+saleor / graphql / page / __init__.py                            0     0     0  10000%
+saleor / graphql / page / bulk_mutations.py                    104    36     0   6538%
+saleor / graphql / page / dataloaders.py                        48    22     0   5417%
+saleor / graphql / page / filters.py                           264   195     0   2614%
+saleor / graphql / page / mutations / __init__.py               11     0     0  10000%
+saleor / graphql / page / mutations / page_attribute_assign.py    49    20     0   5918%
+saleor / graphql / page / mutations / page_attribute_unassign.py    32     8     0   7500%
+saleor / graphql / page / mutations / page_create.py            95    38     0   6000%
+saleor / graphql / page / mutations / page_delete.py            47    16     0   6596%
+saleor / graphql / page / mutations / page_reorder_attribute_values.py    62    27     0   5645%
+saleor / graphql / page / mutations / page_type_create.py       62    22     2   6452%
+saleor / graphql / page / mutations / page_type_delete.py       45    13     0   7111%
+saleor / graphql / page / mutations / page_type_reorder_attributes.py    42    16     0   6190%
+saleor / graphql / page / mutations / page_type_update.py       68    31     0   5441%
+saleor / graphql / page / mutations / page_update.py            53    17     0   6792%
+saleor / graphql / page / resolvers.py                          27    16     0   4074%
+saleor / graphql / page / schema.py                             71    25     0   6479%
+saleor / graphql / page / sorters.py                            45     2     0   9556%
+saleor / graphql / page / types.py                             137    40     0   7080%
+saleor / graphql / payment / __init__.py                         0     0     0  10000%
+saleor / graphql / payment / dataloaders.py                     24    12     0   5000%
+saleor / graphql / payment / enums.py                           55     2     0   9636%
+saleor / graphql / payment / filters.py                         14     0     0  10000%
+saleor / graphql / payment / mutations / __init__.py             4     0     0  10000%
+saleor / graphql / payment / mutations / base.py                51    31     2   3922%
+saleor / graphql / payment / mutations / payment / __init__.py     7     0     0  10000%
+saleor / graphql / payment / mutations / payment / checkout_payment_create.py   137    65     0   5255%
+saleor / graphql / payment / mutations / payment / payment_capture.py    36    11     0   6944%
+saleor / graphql / payment / mutations / payment / payment_check_balance.py    60    17     0   7167%
+saleor / graphql / payment / mutations / payment / payment_initialize.py    41    14     0   6585%
+saleor / graphql / payment / mutations / payment / payment_refund.py    41    18     0   5610%
+saleor / graphql / payment / mutations / payment / payment_void.py    34    11     0   6765%
+saleor / graphql / payment / mutations / stored_payment_methods / __init__.py     5     0     0  10000%
+saleor / graphql / payment / mutations / stored_payment_methods / payment_gateway_initialize_tokenization.py    50    19     0   6200%
+saleor / graphql / payment / mutations / stored_payment_methods / payment_method_intialize_tokenization.py    43    10     0   7674%
+saleor / graphql / payment / mutations / stored_payment_methods / payment_method_process_tokenization.py    42    10     0   7619%
+saleor / graphql / payment / mutations / stored_payment_methods / payment_method_request_delete.py    48    20     0   5833%
+saleor / graphql / payment / mutations / stored_payment_methods / utils.py    19    12     0   3684%
+saleor / graphql / payment / mutations / transaction / __init__.py     9     0     0  10000%
+saleor / graphql / payment / mutations / transaction / payment_gateway_initialize.py    61    26     0   5738%
+saleor / graphql / payment / mutations / transaction / shared.py    64    39     0   3906%
+saleor / graphql / payment / mutations / transaction / transaction_create.py   177    94     2   4689%
+saleor / graphql / payment / mutations / transaction / transaction_event_report.py   178   101     2   4326%
+saleor / graphql / payment / mutations / transaction / transaction_initialize.py    87    38     0   5632%
+saleor / graphql / payment / mutations / transaction / transaction_process.py   102    51     2   5000%
+saleor / graphql / payment / mutations / transaction / transaction_request_action.py   136    84     2   3824%
+saleor / graphql / payment / mutations / transaction / transaction_request_refund_for_granted_refund.py    83    45     2   4578%
+saleor / graphql / payment / mutations / transaction / transaction_update.py   104    52     2   5000%
+saleor / graphql / payment / mutations / transaction / utils.py    34    22     0   3529%
+saleor / graphql / payment / resolvers.py                       23    14     0   3913%
+saleor / graphql / payment / schema.py                          54    13     0   7593%
+saleor / graphql / payment / types.py                          430   145     0   6628%
+saleor / graphql / payment / utils.py                           26    19     3   2692%
+saleor / graphql / plugins / __init__.py                         0     0     0  10000%
+saleor / graphql / plugins / dataloaders.py                     41    17     0   5854%
+saleor / graphql / plugins / enums.py                            8     0     0  10000%
+saleor / graphql / plugins / filters.py                         37    21     0   4324%
+saleor / graphql / plugins / mutations.py                       57    24     0   5789%
+saleor / graphql / plugins / resolvers.py                       55    45     0   1818%
+saleor / graphql / plugins / schema.py                          30     4     0   8667%
+saleor / graphql / plugins / sorters.py                         36    20     0   4444%
+saleor / graphql / plugins / types.py                           47     5     2   8936%
+saleor / graphql / product / __init__.py                         0     0     0  10000%
+saleor / graphql / product / bulk_mutations / __init__.py       13     0     0  10000%
+saleor / graphql / product / bulk_mutations / category_bulk_delete.py    22     2     0   9091%
+saleor / graphql / product / bulk_mutations / collection_bulk_delete.py    37    13     0   6486%
+saleor / graphql / product / bulk_mutations / product_bulk_create.py   425   292     0   3129%
+saleor / graphql / product / bulk_mutations / product_bulk_delete.py    73    34     0   5342%
+saleor / graphql / product / bulk_mutations / product_media_bulk_delete.py    16     0     0  10000%
+saleor / graphql / product / bulk_mutations / product_type_bulk_delete.py    37     9     0   7568%
+saleor / graphql / product / bulk_mutations / product_variant_bulk_create.py   371   253     0   3181%
+saleor / graphql / product / bulk_mutations / product_variant_bulk_delete.py    93    45     0   5161%
+saleor / graphql / product / bulk_mutations / product_variant_bulk_update.py   348   241     0   3075%
+saleor / graphql / product / bulk_mutations / product_variant_stocks_create.py    74    35     0   5270%
+saleor / graphql / product / bulk_mutations / product_variant_stocks_delete.py    52    18     0   6538%
+saleor / graphql / product / bulk_mutations / product_variant_stocks_update.py    73    36     0   5068%
+saleor / graphql / product / dataloaders / __init__.py           3     0     0  10000%
+saleor / graphql / product / dataloaders / attributes.py        45    17     0   6222%
+saleor / graphql / product / dataloaders / products.py         316   190     0   3987%
+saleor / graphql / product / enums.py                           41     0     0  10000%
+saleor / graphql / product / filters / __init__.py               0     0     0  10000%
+saleor / graphql / product / filters / category.py              37     4     0   8919%
+saleor / graphql / product / filters / collection.py            45    11     0   7556%
+saleor / graphql / product / filters / product.py              170    61     0   6412%
+saleor / graphql / product / filters / product_attributes.py   371   327     0   1186%
+saleor / graphql / product / filters / product_helpers.py      234   184     0   2137%
+saleor / graphql / product / filters / product_type.py          44    17     0   6136%
+saleor / graphql / product / filters / product_variant.py      261   194     0   2567%
+saleor / graphql / product / filters / shared.py                 3     1     0   6667%
+saleor / graphql / product / mutations / __init__.py             6     0     0  10000%
+saleor / graphql / product / mutations / attributes.py         345   192     0   4435%
+saleor / graphql / product / mutations / category / __init__.py     4     0     0  10000%
+saleor / graphql / product / mutations / category / category_create.py    68    21     0   6912%
+saleor / graphql / product / mutations / category / category_delete.py    27     6     0   7778%
+saleor / graphql / product / mutations / category / category_update.py    38    10     0   7368%
+saleor / graphql / product / mutations / channels.py           326   182     3   4417%
+saleor / graphql / product / mutations / collection / __init__.py     7     0     0  10000%
+saleor / graphql / product / mutations / collection / collection_add_products.py    46    16     0   6522%
+saleor / graphql / product / mutations / collection / collection_create.py    89    29     0   6742%
+saleor / graphql / product / mutations / collection / collection_delete.py    40    14     0   6500%
+saleor / graphql / product / mutations / collection / collection_remove_products.py    34    10     0   7059%
+saleor / graphql / product / mutations / collection / collection_reorder_products.py    49    18     0   6327%
+saleor / graphql / product / mutations / collection / collection_update.py    38    10     0   7368%
+saleor / graphql / product / mutations / digital_contents.py   158    68     0   5696%
+saleor / graphql / product / mutations / product / __init__.py     8     0     0  10000%
+saleor / graphql / product / mutations / product / product_cleaner.py    18    11     0   3889%
+saleor / graphql / product / mutations / product / product_create.py   112    32     0   7143%
+saleor / graphql / product / mutations / product / product_delete.py    61    24     0   6066%
+saleor / graphql / product / mutations / product / product_media_create.py    78    37     0   5256%
+saleor / graphql / product / mutations / product / product_media_delete.py    33    10     0   6970%
+saleor / graphql / product / mutations / product / product_media_reorder.py    41    14     0   6585%
+saleor / graphql / product / mutations / product / product_media_update.py    44    13     0   7045%
+saleor / graphql / product / mutations / product / product_update.py   105    52     0   5048%
+saleor / graphql / product / mutations / product_type / __init__.py     4     0     0  10000%
+saleor / graphql / product / mutations / product_type / product_type_create.py    79    31     0   6076%
+saleor / graphql / product / mutations / product_type / product_type_delete.py    41    10     0   7561%
+saleor / graphql / product / mutations / product_type / product_type_update.py    36    10     0   7222%
+saleor / graphql / product / mutations / product_variant / __init__.py     9     0     0  10000%
+saleor / graphql / product / mutations / product_variant / product_variant_cleaner.py    34    23     0   3235%
+saleor / graphql / product / mutations / product_variant / product_variant_create.py   155    72     0   5355%
+saleor / graphql / product / mutations / product_variant / product_variant_delete.py    89    45     0   4944%
+saleor / graphql / product / mutations / product_variant / product_variant_preorder_deactivate.py    39    13     0   6667%
+saleor / graphql / product / mutations / product_variant / product_variant_reorder.py    49    21     0   5714%
+saleor / graphql / product / mutations / product_variant / product_variant_set_default.py    36    11     0   6944%
+saleor / graphql / product / mutations / product_variant / product_variant_update.py   185   117     0   3676%
+saleor / graphql / product / mutations / product_variant / variant_media_assign.py    42    15     0   6429%
+saleor / graphql / product / mutations / product_variant / variant_media_unassign.py    38    12     0   6842%
+saleor / graphql / product / mutations / utils.py                8     4     0   5000%
+saleor / graphql / product / resolvers.py                      134    94     0   2985%
+saleor / graphql / product / schema.py                         248   101     0   5927%
+saleor / graphql / product / sorters.py                        174    24     0   8621%
+saleor / graphql / product / types / __init__.py                 5     0     0  10000%
+saleor / graphql / product / types / categories.py             115    48     0   5826%
+saleor / graphql / product / types / channels.py               171    71     0   5848%
+saleor / graphql / product / types / collections.py            109    44     0   5963%
+saleor / graphql / product / types / digital_contents.py        52     4     0   9231%
+saleor / graphql / product / types / products.py               808   440     0   4554%
+saleor / graphql / product / utils.py                           87    48     3   4483%
+saleor / graphql / promise.py                                   11     0     0  10000%
+saleor / graphql / query_cost_map.py                             2     0     0  10000%
+saleor / graphql / schema_printer.py                           227    17     0   9251%
+saleor / graphql / shipping / __init__.py                        0     0     0  10000%
+saleor / graphql / shipping / bulk_mutations / __init__.py       3     0     0  10000%
+saleor / graphql / shipping / bulk_mutations / shipping_price_bulk_delete.py    31     7     0   7742%
+saleor / graphql / shipping / bulk_mutations / shipping_zone_bulk_delete.py    28     6     0   7857%
+saleor / graphql / shipping / dataloaders.py                   106    67     0   3679%
+saleor / graphql / shipping / enums.py                           9     0     0  10000%
+saleor / graphql / shipping / filters.py                        23     5     0   7826%
+saleor / graphql / shipping / mutations / __init__.py           10     0     0  10000%
+saleor / graphql / shipping / mutations / base.py              204   152     0   2549%
+saleor / graphql / shipping / mutations / shipping_method_channel_listing_update.py   135    78     2   4222%
+saleor / graphql / shipping / mutations / shipping_price_create.py    57     6     0   8947%
+saleor / graphql / shipping / mutations / shipping_price_delete.py    32     8     0   7500%
+saleor / graphql / shipping / mutations / shipping_price_exclude_products.py    38     9     0   7632%
+saleor / graphql / shipping / mutations / shipping_price_remove_product_from_exclude.py    32     7     0   7812%
+saleor / graphql / shipping / mutations / shipping_price_update.py    35     6     0   8286%
+saleor / graphql / shipping / mutations / shipping_zone_create.py    39     5     0   8718%
+saleor / graphql / shipping / mutations / shipping_zone_delete.py    28     5     0   8214%
+saleor / graphql / shipping / mutations / shipping_zone_update.py    37     5     0   8649%
+saleor / graphql / shipping / resolvers.py                      19    10     0   4737%
+saleor / graphql / shipping / schema.py                         42     6     0   8571%
+saleor / graphql / shipping / types.py                         193    41     0   7876%
+saleor / graphql / shipping / utils.py                          22    14     8   3636%
+saleor / graphql / shop / __init__.py                            0     0     0  10000%
+saleor / graphql / shop / enums.py                               7     0     0  10000%
+saleor / graphql / shop / filters.py                             3     0     0  10000%
+saleor / graphql / shop / mutations / __init__.py               12     0     0  10000%
+saleor / graphql / shop / mutations / gift_card_settings_update.py    48    18     0   6250%
+saleor / graphql / shop / mutations / order_settings_update.py    41    14     0   6585%
+saleor / graphql / shop / mutations / refund_reason_reference_type_clear.py    24     5     0   7917%
+saleor / graphql / shop / mutations / refund_settings_update.py    34     8     0   7647%
+saleor / graphql / shop / mutations / shop_address_update.py    37    13     0   6486%
+saleor / graphql / shop / mutations / shop_domain_update.py     35    10     0   7143%
+saleor / graphql / shop / mutations / shop_fetch_tax_rates.py    18     1     0   9444%
+saleor / graphql / shop / mutations / shop_settings_update.py   104    43     0   5865%
+saleor / graphql / shop / mutations / staff_notification_recipient_create.py    44    18     0   5909%
+saleor / graphql / shop / mutations / staff_notification_recipient_delete.py    16     0     0  10000%
+saleor / graphql / shop / mutations / staff_notification_recipient_update.py    17     0     0  10000%
+saleor / graphql / shop / resolvers.py                          36    22     0   3889%
+saleor / graphql / shop / schema.py                             43     6     0   8605%
+saleor / graphql / shop / types.py                             322    62     0   8075%
+saleor / graphql / shop / utils.py                              20    14     0   3000%
+saleor / graphql / site / __init__.py                            0     0     0  10000%
+saleor / graphql / site / dataloaders.py                        43    15     0   6512%
+saleor / graphql / tax / __init__.py                             0     0     0  10000%
+saleor / graphql / tax / dataloaders.py                         79    48     0   3924%
+saleor / graphql / tax / enums.py                               16     2     0   8750%
+saleor / graphql / tax / filters.py                             31     4     0   8710%
+saleor / graphql / tax / mutations / __init__.py                 8     0     0  10000%
+saleor / graphql / tax / mutations / tax_class_create.py        44     5     0   8864%
+saleor / graphql / tax / mutations / tax_class_delete.py        23     0     0  10000%
+saleor / graphql / tax / mutations / tax_class_update.py        77    29     0   6234%
+saleor / graphql / tax / mutations / tax_configuration_update.py   152    82     0   4605%
+saleor / graphql / tax / mutations / tax_country_configuration_delete.py    33     5     0   8485%
+saleor / graphql / tax / mutations / tax_country_configuration_update.py   126    75     0   4048%
+saleor / graphql / tax / mutations / tax_exemption_manage.py    69    26     0   6232%
+saleor / graphql / tax / schema.py                              63    19     0   6984%
+saleor / graphql / tax / sorters.py                             17     1     0   9412%
+saleor / graphql / tax / types.py                               91     9     0   9011%
+saleor / graphql / translations / __init__.py                    0     0     0  10000%
+saleor / graphql / translations / dataloaders.py                81    14     0   8272%
+saleor / graphql / translations / descriptions.py                3     0     0  10000%
+saleor / graphql / translations / fields.py                      7     0     0  10000%
+saleor / graphql / translations / mutations / __init__.py       19     0     0  10000%
+saleor / graphql / translations / mutations / attribute_bulk_translate.py    59    20     0   6610%
+saleor / graphql / translations / mutations / attribute_translate.py    25     3     0   8800%
+saleor / graphql / translations / mutations / attribute_value_bulk_translate.py    74    28     0   6216%
+saleor / graphql / translations / mutations / attribute_value_translate.py    41     9     0   7805%
+saleor / graphql / translations / mutations / category_translate.py    19     0     0  10000%
+saleor / graphql / translations / mutations / collection_translate.py    26     3     0   8846%
+saleor / graphql / translations / mutations / menu_item_translate.py    26     3     0   8846%
+saleor / graphql / translations / mutations / page_translate.py    26     0     0  10000%
+saleor / graphql / translations / mutations / product_bulk_translate.py    60    20     0   6667%
+saleor / graphql / translations / mutations / product_translate.py    37    12     0   6757%
+saleor / graphql / translations / mutations / product_variant_bulk_translate.py    60    20     0   6667%
+saleor / graphql / translations / mutations / product_variant_translate.py    38    13     0   6579%
+saleor / graphql / translations / mutations / promotion_rule_translate.py    38    11     0   7105%
+saleor / graphql / translations / mutations / promotion_translate.py    38    11     0   7105%
+saleor / graphql / translations / mutations / sale_translate.py    51    21     0   5882%
+saleor / graphql / translations / mutations / shipping_price_translate.py    35     6     0   8286%
+saleor / graphql / translations / mutations / shop_settings_translate.py    39    10     0   7436%
+saleor / graphql / translations / mutations / utils.py         252   151     1   4008%
+saleor / graphql / translations / mutations / voucher_translate.py    26     3     0   8846%
+saleor / graphql / translations / resolvers.py                  36    13     0   6389%
+saleor / graphql / translations / schema.py                     90    41     0   5444%
+saleor / graphql / translations / types.py                     531    99     0   8136%
+saleor / graphql / utils / __init__.py                         159    79     2   5031%
+saleor / graphql / utils / filters.py                          113    86     2   2389%
+saleor / graphql / utils / sorting.py                           61    49     0   1967%
+saleor / graphql / utils / validators.py                        62    29     0   5323%
+saleor / graphql / views.py                                    319   118     0   6301%
+saleor / graphql / warehouse / __init__.py                       0     0     0  10000%
+saleor / graphql / warehouse / bulk_mutations / __init__.py      2     0     0  10000%
+saleor / graphql / warehouse / bulk_mutations / stock_bulk_update.py   193   127     0   3420%
+saleor / graphql / warehouse / dataloaders.py                  274   209     4   2372%
+saleor / graphql / warehouse / enums.py                          7     0     0  10000%
+saleor / graphql / warehouse / filters.py                       66    25     0   6212%
+saleor / graphql / warehouse / mutations / __init__.py           6     0     0  10000%
+saleor / graphql / warehouse / mutations / base.py              28    20     0   2857%
+saleor / graphql / warehouse / mutations / warehouse_create.py    41    15     0   6341%
+saleor / graphql / warehouse / mutations / warehouse_delete.py    45    22     0   5111%
+saleor / graphql / warehouse / mutations / warehouse_shipping_zone_assign.py    62    29     0   5323%
+saleor / graphql / warehouse / mutations / warehouse_shipping_zone_unassign.py    27     4     0   8519%
+saleor / graphql / warehouse / mutations / warehouse_update.py    47    18     0   6170%
+saleor / graphql / warehouse / resolvers.py                      8     3     0   6250%
+saleor / graphql / warehouse / schema.py                        46     9     0   8043%
+saleor / graphql / warehouse / sorters.py                       17     1     0   9412%
+saleor / graphql / warehouse / types.py                        142    34     0   7606%
+saleor / graphql / webhook / __init__.py                         0     0     0  10000%
+saleor / graphql / webhook / dataloaders / __init__.py           3     0     0  10000%
+saleor / graphql / webhook / dataloaders / models.py            65    40     0   3846%
+saleor / graphql / webhook / dataloaders / pregenerated_payload_for_checkout_tax.py    56    37     0   3393%
+saleor / graphql / webhook / dataloaders / pregenerated_payloads_for_checkout_filter_shipping_methods.py    54    38     0   2963%
+saleor / graphql / webhook / dataloaders / request_context.py    13     5     0   6154%
+saleor / graphql / webhook / enums.py                           37     0     0  10000%
+saleor / graphql / webhook / filters.py                         17     6     0   6471%
+saleor / graphql / webhook / mixins.py                           9     3     0   6667%
+saleor / graphql / webhook / mutations / __init__.py             7     0     0  10000%
+saleor / graphql / webhook / mutations / event_delivery_retry.py    30     7     0   7667%
+saleor / graphql / webhook / mutations / webhook_create.py      95    43     0   5474%
+saleor / graphql / webhook / mutations / webhook_delete.py      41    15     0   6341%
+saleor / graphql / webhook / mutations / webhook_dry_run.py     80    42     0   4750%
+saleor / graphql / webhook / mutations / webhook_trigger.py    113    63     0   4425%
+saleor / graphql / webhook / mutations / webhook_update.py      56    11     0   8036%
+saleor / graphql / webhook / resolvers.py                       35    19     0   4571%
+saleor / graphql / webhook / schema.py                          34     3     0   9118%
+saleor / graphql / webhook / sorters.py                         32     2     0   9375%
+saleor / graphql / webhook / subscription_payload.py           118    91     0   2288%
+saleor / graphql / webhook / subscription_query.py             123    98     0   2033%
+saleor / graphql / webhook / subscription_types.py            1685   241     0   8570%
+saleor / graphql / webhook / types.py                          123    23     0   8130%
+saleor / graphql / webhook / utils.py                           13     7     0   4615%
+saleor / invoice / __init__.py                                   7     0     0  10000%
+saleor / invoice / error_codes.py                               10     0     0  10000%
+saleor / invoice / events.py                                    14     5     0   6429%
+saleor / invoice / models.py                                    51    10     0   8039%
+saleor / invoice / notifications.py                             17    11     5   3529%
+saleor / menu / __init__.py                                      0     0     0  10000%
+saleor / menu / error_codes.py                                  11     0     0  10000%
+saleor / menu / models.py                                       51     9     0   8235%
+saleor / order / __init__.py                                   119     0     2  10000%
+saleor / order / actions.py                                    687   585     6   1485%
+saleor / order / base_calculations.py                          149   121     2   1879%
+saleor / order / calculations.py                               297   215     0   2761%
+saleor / order / error_codes.py                                 87     0     0  10000%
+saleor / order / events.py                                     172   104     3   3953%
+saleor / order / fetch.py                                      135    82     0   3926%
+saleor / order / interface.py                                    6     0     0  10000%
+saleor / order / lock_objects.py                                 6     2     0   6667%
+saleor / order / models.py                                     350    79     2   7743%
+saleor / order / notifications.py                              205   151     3   2634%
+saleor / order / search.py                                      96    79     3   1771%
+saleor / order / tasks.py                                      102    59     0   4216%
+saleor / order / utils.py                                      569   434     7   2373%
+saleor / page / __init__.py                                      0     0     0  10000%
+saleor / page / error_codes.py                                   9     0     0  10000%
+saleor / page / lock_objects.py                                  4     1     0   7500%
+saleor / page / models.py                                       56    11     3   8036%
+saleor / page / search.py                                       85    56     0   3412%
+saleor / page / tasks.py                                        22     9     0   5909%
+saleor / page / utils.py                                         6     3     0   5000%
+saleor / patch_local.py                                         20     3     0   8500%
+saleor / payment / __init__.py                                  99     0     0  10000%
+saleor / payment / dataloaders.py                               11     5     0   5455%
+saleor / payment / error_codes.py                              102     0     0  10000%
+saleor / payment / gateway.py                                  204   132     2   3529%
+saleor / payment / gateways / __init__.py                        0     0     0  10000%
+saleor / payment / gateways / adyen / __init__.py                0     0     0  10000%
+saleor / payment / gateways / adyen / plugin.py                265   265     0      0%
+saleor / payment / gateways / adyen / utils / __init__.py        0     0     0  10000%
+saleor / payment / gateways / adyen / utils / apple_pay.py      40    40     0      0%
+saleor / payment / gateways / adyen / utils / common.py        213   213     2      0%
+saleor / payment / gateways / adyen / webhooks.py              549   549     0      0%
+saleor / payment / gateways / authorize_net / __init__.py      200   200     0      0%
+saleor / payment / gateways / authorize_net / plugin.py         74    74     4      0%
+saleor / payment / gateways / braintree / __init__.py          144   144     0      0%
+saleor / payment / gateways / braintree / errors.py             16    16     0      0%
+saleor / payment / gateways / braintree / plugin.py             57    57     3      0%
+saleor / payment / gateways / dummy / __init__.py               51    51     0      0%
+saleor / payment / gateways / dummy / plugin.py                 55    55     2      0%
+saleor / payment / gateways / dummy_credit_card / __init__.py    52    52     0      0%
+saleor / payment / gateways / dummy_credit_card / plugin.py     55    55     2      0%
+saleor / payment / gateways / np_atobarai / __init__.py         61    61     2      0%
+saleor / payment / gateways / np_atobarai / api.py              77    77     0      0%
+saleor / payment / gateways / np_atobarai / api_helpers.py     138   138     2      0%
+saleor / payment / gateways / np_atobarai / api_types.py        37    37     0      0%
+saleor / payment / gateways / np_atobarai / const.py            18    18     0      0%
+saleor / payment / gateways / np_atobarai / errors.py           18    18     0      0%
+saleor / payment / gateways / np_atobarai / plugin.py           62    62     3      0%
+saleor / payment / gateways / np_atobarai / utils.py            56    56     0      0%
+saleor / payment / gateways / razorpay / __init__.py            63    63     0      0%
+saleor / payment / gateways / razorpay / errors.py               4     4     0      0%
+saleor / payment / gateways / razorpay / plugin.py              38    38     2      0%
+saleor / payment / gateways / razorpay / utils.py                5     5     0      0%
+saleor / payment / gateways / stripe / __init__.py               0     0     0  10000%
+saleor / payment / gateways / stripe / consts.py                20    20     0      0%
+saleor / payment / gateways / stripe / plugin.py               243   243     2      0%
+saleor / payment / gateways / stripe / stripe_api.py           148   148     0      0%
+saleor / payment / gateways / stripe / webhooks.py             208   208     0      0%
+saleor / payment / gateways / utils.py                           9     9     2      0%
+saleor / payment / interface.py                                272     1     6   9963%
+saleor / payment / lock_objects.py                              16     7     3   5625%
+saleor / payment / model_helpers.py                             16     8     2   5000%
+saleor / payment / models.py                                   187    25     0   8663%
+saleor / payment / tasks.py                                     66    66     0      0%
+saleor / payment / transaction_item_calculations.py            183   138     0   2459%
+saleor / payment / utils.py                                    724   588    22   1878%
+saleor / permission / __init__.py                                0     0     0  10000%
+saleor / permission / apps.py                                    7     0     0  10000%
+saleor / permission / auth_filters.py                           16     5     0   6875%
+saleor / permission / enums.py                                  78    12     0   8462%
+saleor / permission / management.py                             37     6     0   8378%
+saleor / permission / models.py                                 59    25     0   5763%
+saleor / permission / utils.py                                  57    35     3   3860%
+saleor / plugins / __init__.py                                  12     9     0   2500%
+saleor / plugins / admin_email / __init__.py                     0     0     0  10000%
+saleor / plugins / admin_email / constants.py                   25    25     0      0%
+saleor / plugins / admin_email / notify_events.py               51    51     2      0%
+saleor / plugins / admin_email / plugin.py                     106   106     0      0%
+saleor / plugins / admin_email / tasks.py                       29    29     0      0%
+saleor / plugins / apps.py                                      23    10     2   5652%
+saleor / plugins / avatax / __init__.py                        350   350     5      0%
+saleor / plugins / avatax / plugin.py                          401   401     7      0%
+saleor / plugins / avatax / tasks.py                            33    33     0      0%
+saleor / plugins / base_plugin.py                              353    93    26   7365%
+saleor / plugins / const.py                                      1     0     0  10000%
+saleor / plugins / email_common.py                             174   174     3      0%
+saleor / plugins / error_codes.py                                8     0     0  10000%
+saleor / plugins / manager.py                                  892   619    24   3061%
+saleor / plugins / models.py                                    23     2     0   9130%
+saleor / plugins / openid_connect / __init__.py                  1     1     0      0%
+saleor / plugins / openid_connect / client.py                    7     7     0      0%
+saleor / plugins / openid_connect / const.py                     1     1     0      0%
+saleor / plugins / openid_connect / dataclasses.py              15    15     0      0%
+saleor / plugins / openid_connect / exceptions.py                1     1     0      0%
+saleor / plugins / openid_connect / plugin.py                  222   222     0      0%
+saleor / plugins / openid_connect / utils.py                   350   350     2      0%
+saleor / plugins / sendgrid / __init__.py                       21    21     0      0%
+saleor / plugins / sendgrid / plugin.py                         55    55     0      0%
+saleor / plugins / sendgrid / tasks.py                         123   123     0      0%
+saleor / plugins / user_email / __init__.py                      0     0     0  10000%
+saleor / plugins / user_email / constants.py                    65    65     0      0%
+saleor / plugins / user_email / notify_events.py               125   125     2      0%
+saleor / plugins / user_email / plugin.py                       94    94     2      0%
+saleor / plugins / user_email / tasks.py                       100   100     0      0%
+saleor / plugins / views.py                                     16     6     0   6250%
+saleor / plugins / webhook / __init__.py                         0     0     0  10000%
+saleor / plugins / webhook / conftest.py                        10    10     0      0%
+saleor / plugins / webhook / plugin.py                        1415  1415    18      0%
+saleor / product / __init__.py                                   8     0     0  10000%
+saleor / product / apps.py                                      11     0     0  10000%
+saleor / product / error_codes.py                               60     0     0  10000%
+saleor / product / lock_objects.py                               4     1     0   7500%
+saleor / product / managers.py                                 116    81     0   3017%
+saleor / product / models.py                                   346    60     0   8266%
+saleor / product / product_images.py                            16    16     2      0%
+saleor / product / search.py                                    68    46     2   3235%
+saleor / product / signals.py                                   10     6     0   4000%
+saleor / product / tasks.py                                    163    98     0   3988%
+saleor / product / utils / __init__.py                          49    33     4   3265%
+saleor / product / utils / availability.py                      81    16     0   8025%
+saleor / product / utils / costs.py                             53    37     2   3019%
+saleor / product / utils / digital_products.py                  33    22     0   3333%
+saleor / product / utils / product.py                           57    47     0   1754%
+saleor / product / utils / search_helpers.py                     6     3     0   5000%
+saleor / product / utils / variant_prices.py                   107    86     0   1963%
+saleor / product / utils / variants.py                          31    19     2   3871%
+saleor / product / views.py                                     24    16     0   3333%
+saleor / schedulers / __init__.py                                0     0     0  10000%
+saleor / schedulers / customschedule.py                         12     3     0   7500%
+saleor / schedulers / models.py                                 64    33     2   4844%
+saleor / schedulers / schedulers.py                             66    66     0      0%
+saleor / seo / __init__.py                                       0     0     0  10000%
+saleor / seo / models.py                                        23     4     0   8261%
+saleor / settings.py                                           348    37     0   8937%
+saleor / shipping / __init__.py                                  8     0     0  10000%
+saleor / shipping / error_codes.py                              10     0     0  10000%
+saleor / shipping / interface.py                                40    10     2   7500%
+saleor / shipping / models.py                                  147    55     6   6259%
+saleor / shipping / postal_codes.py                             65    52     0   2000%
+saleor / shipping / tasks.py                                    13     3     0   7692%
+saleor / shipping / utils.py                                    46     8     2   8261%
+saleor / site / __init__.py                                      4     0     0  10000%
+saleor / site / context_processors.py                            9     0     2  10000%
+saleor / site / error_codes.py                                  14     0     0  10000%
+saleor / site / models.py                                       75    13     0   8267%
+saleor / site / patch_sites.py                                  43    18     0   5814%
+saleor / tax / __init__.py                                       8     0     0  10000%
+saleor / tax / calculations / __init__.py                       17     4     0   7647%
+saleor / tax / calculations / checkout.py                       37    24     3   3514%
+saleor / tax / calculations / order.py                          75    58     2   2267%
+saleor / tax / error_codes.py                                   34     0     0  10000%
+saleor / tax / models.py                                        44     3     0   9318%
+saleor / tax / utils.py                                        117    78     5   3333%
+saleor / thumbnail / __init__.py                                18     0     0  10000%
+saleor / thumbnail / apps.py                                     8     0     0  10000%
+saleor / thumbnail / models.py                                  20     3     0   8500%
+saleor / thumbnail / signals.py                                  4     2     0   5000%
+saleor / thumbnail / utils.py                                  125    86     2   3120%
+saleor / thumbnail / validators.py                              33    25     0   2424%
+saleor / thumbnail / views.py                                   76    51     0   3289%
+saleor / translations / __init__.py                              0     0     0  10000%
+saleor / translations / error_codes.py                          21     0     0  10000%
+saleor / urls.py                                                15     0     0  10000%
+saleor / warehouse / __init__.py                                 5     0     0  10000%
+saleor / warehouse / availability.py                           178   137     5   2303%
+saleor / warehouse / error_codes.py                             20     0     0  10000%
+saleor / warehouse / lock_objects.py                             7     3     0   5714%
+saleor / warehouse / management.py                             393   340     2   1349%
+saleor / warehouse / models.py                                 227    89     7   6079%
+saleor / warehouse / reservations.py                           157   130     3   1720%
+saleor / warehouse / tasks.py                                   34    34     0      0%
+saleor / warehouse / validation.py                              11     8     0   2727%
+saleor / webhook / __init__.py                                   8     4     0   5000%
+saleor / webhook / circuit_breaker / breaker_board.py           98    65     3   3367%
+saleor / webhook / const.py                                      6     0     0  10000%
+saleor / webhook / deprecated_event_types.py                    49     0     0  10000%
+saleor / webhook / error_codes.py                               35     0     0  10000%
+saleor / webhook / event_types.py                              182     0     0  10000%
+saleor / webhook / models.py                                    29     2     0   9310%
+saleor / webhook / observability / __init__.py                   6     0     0  10000%
+saleor / webhook / observability / buffers.py                  119    75     8   3697%
+saleor / webhook / observability / exceptions.py                16     3     0   8125%
+saleor / webhook / observability / obfuscation.py              103    79     3   2330%
+saleor / webhook / observability / payload_schema.py           103    23     0   7767%
+saleor / webhook / observability / payloads.py                 113    67     3   4071%
+saleor / webhook / observability / sensitive_data.py             5     0     0  10000%
+saleor / webhook / observability / tracing.py                    7     3     0   5714%
+saleor / webhook / observability / utils.py                    143    58     4   5944%
+saleor / webhook / payload_serializers.py                       63    49     0   2222%
+saleor / webhook / payloads.py                                 479   319     7   3340%
+saleor / webhook / response_schemas / __init__.py                6     0     0  10000%
+saleor / webhook / response_schemas / payment.py                67    15     0   7761%
+saleor / webhook / response_schemas / shipping.py               67    24     0   6418%
+saleor / webhook / response_schemas / taxes.py                  23     7     0   6957%
+saleor / webhook / response_schemas / transaction.py           120    28     0   7667%
+saleor / webhook / response_schemas / utils / __init__.py        0     0     0  10000%
+saleor / webhook / response_schemas / utils / annotations.py    77    38     0   5065%
+saleor / webhook / response_schemas / utils / helpers.py        13    11     0   1538%
+saleor / webhook / response_schemas / utils / validators.py      8     7     0   1250%
+saleor / webhook / serializers.py                               90    73     4   1889%
+saleor / webhook / transport / __init__.py                       8     4     0   5000%
+saleor / webhook / transport / asynchronous / __init__.py        2     0     0  10000%
+saleor / webhook / transport / asynchronous / transport.py     311   242     3   2219%
+saleor / webhook / transport / list_stored_payment_methods.py    92    72     0   2174%
+saleor / webhook / transport / metrics.py                       23     9     0   6087%
+saleor / webhook / transport / payment.py                       31    31     0      0%
+saleor / webhook / transport / shipping.py                      84    84     0      0%
+saleor / webhook / transport / shipping_helpers.py              19    14     0   2632%
+saleor / webhook / transport / synchronous / __init__.py         2     2     0      0%
+saleor / webhook / transport / synchronous / transport.py      192   192     2      0%
+saleor / webhook / transport / taxes.py                         12    12     0      0%
+saleor / webhook / transport / utils.py                        286   182     0   3636%
+saleor / webhook / utils.py                                     71     3     2   9577%
+saleor / webhook / validators.py                                20    14     0   3000%
+
+Total                                                        82616 42973   632   4798%

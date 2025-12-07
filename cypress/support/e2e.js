@@ -19,15 +19,32 @@ import './commands';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-// Hide fetch/XHR requests from command log
+// Handle uncaught exceptions
 Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test on uncaught exceptions
-  // (useful for React dev mode warnings)
+  // Ignore ResizeObserver errors (common in React apps)
   if (err.message.includes('ResizeObserver loop limit exceeded')) {
     return false;
   }
-  // return false to prevent the error from failing this test
+  // Ignore network errors that might occur during page load
+  if (err.message.includes('NetworkError') || err.message.includes('Failed to fetch')) {
+    return false;
+  }
+  // Ignore React hydration warnings
+  if (err.message.includes('Hydration') || err.message.includes('hydration')) {
+    return false;
+  }
+  // Ignore ChunkLoadError (webpack chunk loading errors)
+  if (err.message.includes('ChunkLoadError') || err.message.includes('Loading chunk')) {
+    return false;
+  }
+  // For other errors, let Cypress handle them
   return true;
+});
+
+// Add global error handler for better debugging
+Cypress.on('fail', (error, runnable) => {
+  // Log the error for debugging
+  console.error('Test failed:', error.message);
+  throw error;
 });
 

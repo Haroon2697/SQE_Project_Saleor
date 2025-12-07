@@ -120,6 +120,9 @@ class TestCalculateBaseLineTotalPrice:
             currency="USD"
         )
         
+        line.undiscounted_unit_price_amount = Decimal("10.00")
+        line.save()
+        
         line_info = CheckoutLineInfo(
             line=line,
             variant=variant,
@@ -128,11 +131,14 @@ class TestCalculateBaseLineTotalPrice:
             product_type=variant.product.product_type,
             collections=[],
             discounts=[],
+            rules_info=[],
+            channel=channel,
             voucher=None,
-            undiscounted_unit_price=Money(Decimal("10.00"), "USD")
+            voucher_code=None,
+            tax_class=None
         )
         
-        result = calculate_base_line_total_price(line_info, include_voucher=True)
+        result = calculate_base_line_total_price(line_info)
         assert result == Money(Decimal("20.00"), "USD")  # 10 * 2
     
     def test_calculate_base_line_total_price_with_discounts(self):

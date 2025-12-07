@@ -1,0 +1,11 @@
+{
+  "name": "saleor-cypress-clean",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^15.7.1"
+  }
+}
