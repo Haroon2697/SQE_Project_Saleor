@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copy project files for dependency installation
 COPY pyproject.toml ./
-COPY README.md* ./
+COPY README.md ./
 COPY saleor/ ./saleor/
 COPY manage.py ./
 

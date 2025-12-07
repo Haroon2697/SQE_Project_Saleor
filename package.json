@@ -27,6 +27,8 @@
     "cypress:run": "cypress run",
     "cypress:run:record": "cypress run --record --key $CYPRESS_RECORD_KEY",
     "test:cypress": "cypress run",
-    "test:cypress:record": "cypress run --record"
+    "test:cypress:record": "cypress run --record",
+    "start:servers": "./start_servers_for_cypress.sh",
+    "cypress:setup": "echo 'Starting servers for Cypress...' && ./start_servers_for_cypress.sh & sleep 10 && echo 'Servers should be ready. Run: npm run cypress:open'"
   }
 }

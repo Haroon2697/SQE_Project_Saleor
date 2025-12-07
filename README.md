@@ -1,196 +1,285 @@
-<div align="center" width="100px">
+# Saleor E-Commerce Platform - SQE Project
 
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/76e3079f-696a-4fcd-8658-89739647090b">
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8477d643-a905-4c63-8ed3-03d0976f6fc3">
-   <img width="200" alt="saleor-commerce-logo" src="https://user-images.githubusercontent.com/4006792/214636328-8e4f83e8-66cb-4114-a3d8-473eb908b9c3.png">
+A comprehensive quality engineering project for the Saleor e-commerce platform, including automated testing, CI/CD pipeline, and deployment automation.
 
- </picture>
-</div>
+## 📋 Table of Contents
 
-<div align="center">
-  <strong>Commerce that works with your language and stack</strong>
-</div>
-
-<div align="center">
-  GraphQL native, API-only platform for scalable composable commerce.
-</div>
-
-<br>
-
-<div align="center">
- Get to know Saleor: <br>
-  <a href="https://saleor.typeform.com/talk-with-us?utm_source=github&utm_medium=readme&utm_campaign=repo_saleor">Talk to a human</a>
-  <span> | </span>
-  <a href="https://cloud.saleor.io/signup?utm_source=github&utm_medium=readme&utm_campaign=repo_saleor">Talk to the API</a>
-</div>
-
-<br>
-
-<div align="center">
-  Join our community: <br>
-  <a href="https://saleor.io/">Website</a>
-  <span> | </span>
-  <a href="https://twitter.com/getsaleor">Twitter</a>
-  <span> | </span>
-  <a href="https://saleor.io/discord">Discord</a>
-</div>
-
-<div align="center">
-   <a href="https://saleor.io/blog">Blog</a>
-  <span> | </span>
-  <a href="https://saleor.typeform.com/to/JTJK0Nou">Subscribe to newsletter</a>
-</div>
-
-<br>
-
-<div align="center">
-  <a href="https://codecov.io/gh/saleor/saleor" >
-    <img src="https://codecov.io/gh/saleor/saleor/graph/badge.svg?token=qkNcTJ4TmI" alt="Coverage"/>
-  </a>
-  <a href="https://docs.saleor.io/">
-    <img src="https://img.shields.io/badge/docs-docs.saleor.io-brightgreen.svg" alt="Documentation" />
-  </a>
-  <a href="https://github.com/astral-sh/ruff">
-    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Linted by Ruff">
-  </a>
- <a href="https://saleor.io/discord">
-   <img src="https://img.shields.io/discord/864066819866624010"  alt="Discord" >
- </a>
-</div>
-
-## Table of Contents
-
-- [What makes Saleor special?](#what-makes-saleor-special)
-- [Why API-only Architecture?](#why-api-only-architecture)
-- [Features](#features)
-- [Installation](#installation)
+- [Project Overview](#project-overview)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Testing](#testing)
+- [CI/CD Pipeline](#cicd-pipeline)
+- [Setup & Configuration](#setup--configuration)
 - [Documentation](#documentation)
-- [Saleor Platform](#saleor-platform)
-- [Storefront](#storefront)
-- [Dashboard](#dashboard)
-- [Contributing](#contributing)
-- [License](#license)
 
-## What makes Saleor special?
+## 🎯 Project Overview
 
-- **Technology-agnostic** - no monolithic plugin architecture or technology lock-in.
+This project implements a complete quality engineering solution for Saleor, including:
 
-- **GraphQL only** - Not afterthought API design or fragmentation across different styles of API.
+- **White-box Testing**: Comprehensive unit tests with Statement, Decision, and MC/DC coverage
+- **Black-box Testing**: API integration tests and Cypress UI tests
+- **CI/CD Pipeline**: 5-stage automated pipeline (Source, Build, Test, Staging, Deploy)
+- **Test Coverage**: 80%+ coverage for business logic modules
 
-- **Headless and API only** - APIs are the only way to interact, configure, or extend the backend.
+## 🚀 Quick Start
 
-- **Open source** -  a single version of Saleor without feature fragmentation or commercial limitations.
+### Prerequisites
 
-- **Cloud native** - battle tested on global brands.
+- Ubuntu 20.04+
+- Python 3.12
+- Node.js 18+
+- PostgreSQL 15+
+- Redis 7+
+- Docker (optional)
 
-- **Native-multichannel** - Per [channel](https://docs.saleor.io/developer/channels/overview) control of pricing, currencies, stock, product, and more.
+### Installation
 
-## Why API-only Architecture?
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Haroon2697/SQE_Project_Saleor.git
+   cd SQE_Project_Saleor
+   ```
 
-Saleor's API-first extensibility provides powerful tools for developers to extend backend using [webhooks](https://docs.saleor.io/developer/extending/webhooks/overview), attributes, [metadata](https://docs.saleor.io/api-usage/metadata), [apps](https://docs.saleor.io/developer/extending/apps/overview), [subscription queries](https://docs.saleor.io/developer/extending/webhooks/subscription-webhook-payloads), [API extensions](https://docs.saleor.io/developer/extending/webhooks/synchronous-events/overview), [dashboard iframes](https://docs.saleor.io/developer/extending/apps/overview).
+2. **Create virtual environment:**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
-Compared to traditional plugin architectures (monoliths) it provides the following benefits:
+3. **Install dependencies:**
+   ```bash
+   pip install --upgrade pip setuptools wheel
+   pip install .
+   ```
 
-- There is less downtime as apps are deployed independently.
-- Reliability and performance - custom logic is separated from the core.
-- Simplified upgrade paths - eliminates incompatibility conflicts between extensions.
-- Technology-agnostic - works with any technology, stack, or language.
-- Parallel development - easier to collaborate than with a monolithic core.
-- Simplified debugging - easier to narrow down bugs in independent services.
-- Scalability - extensions and apps can be scaled independently.
+4. **Setup environment variables:**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
 
-### What are the tradeoffs?
+5. **Run migrations:**
+   ```bash
+   python manage.py migrate
+   ```
 
-If you are a single developer working with a small business that doesn't have high traffic or a critical need for 24/7 availability, using a service-oriented approach might feel more complex compared to the traditional WordPress or Magento approach that provides a language-specific framework, runtime, database schema, aspect-oriented programming, and other tools to a quick start.
+6. **Create superuser:**
+   ```bash
+   python manage.py createsuperuser
+   ```
 
-However, if you deploy on a daily basis, reliability and uptime is critical,
-you need to collaborate with other developers, or you have non-trivial requirements you might be in the right place.
+7. **Start the server:**
+   ```bash
+   python manage.py runserver
+   ```
 
-## Features
+## 📁 Project Structure
 
-- **Enterprise ready**: Secure, scalable, and stable. Battle-tested by big brands
-- **Dashboard**: User-friendly, fast, and productive. (Decoupled project [repo](https://github.com/saleor/saleor-dashboard) )
-- **Global by design** Multi-currency, multi-language, multi-warehouse, tutti multi!
-- **CMS**: Manage product or marketing content.
-- **Product management**: A rich content model for large and complex catalogs.
-- **Orders**: Flexible order model, split payments, multi-warehouse, returns, and more.
-- **Customers**: Order history and preferences.
-- **Promotion engine**: Sales, vouchers, cart rules, giftcards.
-- **Payment orchestration**: multi-gateway, extensible payment API, flexible flows.
-- **Cart**: Advanced payment and tax options, with full control over discounts and promotions.
-- **Payments**: Flexible API architecture allows integration of any payment method.
-- **Translations**: Fully translatable catalog.
-- **SEO**: Unlimited SEO freedom with headless architecture.
-- **Apps**: Extend dashboard via iframe with any web stack.
+```
+SQE_Project_Saleor/
+├── saleor/              # Saleor backend application
+├── tests/               # Test suites
+│   ├── unit/           # Unit tests (white-box)
+│   ├── integration/    # Integration tests (black-box)
+│   └── whitebox/       # Comprehensive white-box tests
+├── cypress/             # Cypress UI tests
+├── .github/workflows/   # CI/CD pipeline configurations
+├── scripts/             # Deployment scripts
+└── docs/                # Documentation
+```
 
-![Saleor Dashboard - Modern UI for managing your e-commerce](https://user-images.githubusercontent.com/9268745/224249510-d3c7658e-6d5c-42c5-b4fb-93eaf65a5335.png)
+## 🧪 Testing
 
-## Installation
+### Running Tests
 
-[See the Saleor docs](https://docs.saleor.io/setup/docker-compose) for step-by-step installation and deployment instructions. For local development without Docker, follow our [Contributing Guide](./CONTRIBUTING.md).
+**White-box Tests:**
+```bash
+./run_whitebox_tests.sh
+# or
+pytest tests/whitebox/ --cov=saleor --cov-report=html
+```
 
-Note:
-The `main` branch is the development version of Saleor and it may be unstable. To use the latest stable version, download it from the [Releases](https://github.com/saleor/saleor/releases/) page or switch to a release tag.
+**Integration Tests:**
+```bash
+pytest tests/integration/ -v
+```
 
-The current production-ready version is 3.x and you should use this version for all three components:
+**UI Tests (Cypress):**
+```bash
+npm run cypress:open      # Interactive mode
+npm run cypress:run      # Headless mode
+```
 
-- Saleor: <https://github.com/saleor/saleor/releases/>
-- Dashboard: <https://github.com/saleor/saleor-dashboard/releases/>
-- Storefront: <https://github.com/saleor/react-storefront/releases/>
+### Test Coverage
 
-### Saleor Cloud
+- **HTML Coverage Report**: `htmlcov/whitebox/index.html`
+- **XML Coverage Report**: `coverage-whitebox.xml`
+- **Coverage Target**: 80%+ for business logic modules
 
-The fastest way to develop with Saleor is by using developer accounts in [Saleor Cloud](https://cloud.saleor.io).
+## 🔄 CI/CD Pipeline
 
-Register [here](https://cloud.saleor.io/register) or install our [CLI tool](https://github.com/saleor/saleor-cli):
+The project includes a 5-stage CI/CD pipeline:
 
-`npm i -g @saleor/cli`
+1. **Source Stage**: Code validation and change detection
+2. **Build Stage**: Dependency installation and artifact creation
+3. **Test Stage**: Automated testing (Pytest + Cypress)
+4. **Staging Stage**: Deployment to staging environment
+5. **Deploy Stage**: Production deployment
 
-and run the following command:
+**Pipeline File**: `.github/workflows/complete-cicd-pipeline.yml`
 
-`saleor register`
+**View Pipeline**: Go to [GitHub Actions](https://github.com/Haroon2697/SQE_Project_Saleor/actions) → "🚀 Complete CI/CD Pipeline - 5 Stages"
 
-Bootstrap your first [storefront](https://github.com/saleor/react-storefront) with:
+## ⚙️ Setup & Configuration
 
-`saleor storefront create --url {your-saleor-graphql-endpoint}`
+### Environment Variables
 
-## Documentation
+Create a `.env` file with:
 
-Saleor documentation is available here: [docs.saleor.io](https://docs.saleor.io)
+```env
+DEBUG=True
+SECRET_KEY=your-secret-key-here
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=postgres://saleor:saleor@localhost:5432/saleor
+REDIS_URL=redis://localhost:6379/0
+EMAIL_URL=console://
+DEFAULT_FROM_EMAIL=noreply@example.com
+```
 
-To contribute, please see the [`saleor/saleor-docs` repository](https://github.com/saleor/saleor-docs/).
+### GitHub Secrets
 
-## Saleor Platform
+For CI/CD pipeline, configure these secrets in GitHub:
 
-The easiest way to run all components of Saleor (API, storefront, and dashboard) together on your local machine is to use the [saleor-platform](https://github.com/saleor/saleor-platform) project. Go to that repository for instructions on how to use it.
+- `DJANGO_SECRET_KEY`: Django secret key
+- `DOCKER_HUB_USERNAME`: Docker Hub username
+- `DOCKER_HUB_TOKEN`: Docker Hub personal access token
+- `CYPRESS_RECORD_KEY`: Cypress record key (optional)
 
-[View saleor-platform](https://github.com/saleor/saleor-platform)
+See `QUICK_SECRETS_SETUP.md` for detailed setup instructions.
 
-## Storefront
+## 📚 Documentation
 
-An open-source storefront example built with Next.js App Router, React.js, TypeScript, GraphQL, and Tailwind CSS.
+### Essential Documentation
 
-[React Storefront Repository](https://github.com/saleor/storefront)
+- **`PROJECT_STATUS.md`**: Current project status and completion tracking
+- **`QA_TEST_REPORT.md`**: Comprehensive test report with coverage analysis
+- **`COMPREHENSIVE_WHITEBOX_TESTING.md`**: Detailed white-box testing documentation
+- **`COMPLETE_CICD_IMPLEMENTATION.md`**: Complete CI/CD pipeline documentation
+- **`QUICK_SECRETS_SETUP.md`**: Quick guide for setting up GitHub Secrets
 
-[View Storefront Example](https://storefront.saleor.io/)
+### Testing Documentation
 
-## Dashboard
+- **White-box Tests**: Located in `tests/whitebox/`
+  - Core models, utilities, calculations
+  - Statement, Decision, and MC/DC coverage
+  - 80%+ coverage for business logic
 
-For the dashboard, go to the [saleor-dashboard](https://github.com/saleor/saleor-dashboard) repository.
+- **Black-box Tests**: Located in `tests/integration/`
+  - API endpoint testing
+  - GraphQL query validation
+  - Response verification
 
-## Contributing
+- **UI Tests**: Located in `cypress/e2e/`
+  - Login functionality
+  - Navigation tests
+  - Dashboard interactions
 
-We love your contributions and do our best to provide you with mentorship and support. If you are looking for an issue to tackle, take a look at issues labeled [`Good first issue`](https://github.com/saleor/saleor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22+) and [`Help wanted`](https://github.com/saleor/saleor/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22).
+## 🛠️ Development
 
-If nothing grabs your attention, check [our roadmap](https://saleor.io/roadmap) or [start a Discord discussion](https://saleor.io/discord) about a feature you'd like to see. Make sure to read our [Contribution Guidelines](http://docs.saleor.io/developer/community/contributing) before opening a PR or issue.
+### Running Locally
 
-Get more details (e.g., how to run Saleor on your local machine) in our [Contributing Guide](./CONTRIBUTING.md).
+1. **Start PostgreSQL:**
+   ```bash
+   sudo systemctl start postgresql
+   ```
 
-## License
+2. **Start Redis:**
+   ```bash
+   sudo systemctl start redis
+   ```
 
-Disclaimer: Everything you see here is open and free to use as long as you comply with the [license](https://github.com/saleor/saleor/blob/master/LICENSE). There are no hidden charges. We promise to do our best to fix bugs and improve the code.
+3. **Run migrations:**
+   ```bash
+   python manage.py migrate
+   ```
 
-#### Crafted with ❤️ by [Saleor Commerce](https://saleor.io)
+4. **Start development server:**
+   ```bash
+   python manage.py runserver
+   ```
 
-<hello@saleor.io>
+5. **Access the application:**
+   - GraphQL Playground: http://localhost:8000/graphql/
+   - Admin Panel: http://localhost:8000/admin/
+
+### Running Tests
+
+```bash
+# All tests
+pytest
+
+# With coverage
+pytest --cov=saleor --cov-report=html
+
+# Specific test suite
+pytest tests/whitebox/
+pytest tests/integration/
+```
+
+## 📊 Test Coverage
+
+Current coverage includes:
+
+- **Core Models**: SortableModel, PublishableModel, Metadata
+- **Product Models**: ProductVariant methods
+- **Order Calculations**: Price calculations, discounts
+- **Checkout Calculations**: Subtotal, total, delivery
+- **Discount Utils**: Voucher and promotion logic
+- **Account Utils**: User address management
+- **Payment Utils**: Payment and transaction handling
+- **Shipping Utils**: Shipping method calculations
+
+## 🚢 Deployment
+
+### Staging
+
+```bash
+./scripts/deploy-staging.sh
+```
+
+### Production
+
+```bash
+./scripts/deploy-production.sh
+```
+
+### Docker
+
+```bash
+docker build -t saleor:latest .
+docker run -p 8000:8000 saleor:latest
+```
+
+## 📝 License
+
+This project is licensed under the BSD-3-Clause License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## 🔒 Security
+
+See [SECURITY.md](SECURITY.md) for security policies and reporting.
+
+## 📞 Support
+
+For issues and questions:
+- GitHub Issues: https://github.com/Haroon2697/SQE_Project_Saleor/issues
+- Documentation: See `docs/` directory
+
+---
+
+**Project Status**: ✅ Active Development  
+**Last Updated**: 2025  
+**Version**: 3.23.0-a.0

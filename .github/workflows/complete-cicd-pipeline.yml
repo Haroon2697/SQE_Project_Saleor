@@ -215,7 +215,9 @@ jobs:
           RUN apt-get update && apt-get install -y \
               gcc g++ libpq-dev curl \
               && rm -rf /var/lib/apt/lists/*
-          COPY pyproject.toml README.md* ./
+          COPY pyproject.toml ./
+          COPY doc/ ./doc/ 2>/dev/null || true
+          RUN if [ -f doc/README.md ]; then cp doc/README.md README.md; else echo "# Saleor E-Commerce Platform" > README.md; fi
           COPY saleor/ ./saleor/
           COPY manage.py ./
           RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
@@ -399,8 +401,13 @@ jobs:
         python -m coverage report --skip-covered | tail -1 || echo "Coverage summary unavailable"
         
         # Ensure coverage directories exist
-        mkdir -p htmlcov htmlcov/whitebox htmlcov/integration || true
+        mkdir -p htmlcov htmlcov/whitebox htmlcov/integration htmlcov/combined || true
         echo "Coverage reports generated in htmlcov/"
+        
+        # List generated coverage reports
+        echo "=== Generated Coverage Reports ==="
+        find htmlcov -name "index.html" -type f || echo "No HTML reports found"
+        ls -la htmlcov/ || echo "htmlcov directory not found"
     
     # UI Testing: Cypress - Test key user flows (login, form submission, navigation)
     - name: "🎨 UI Tests - Cypress (Black-box UI Testing)"
@@ -520,6 +527,8 @@ jobs:
         path: |
           coverage.xml
           coverage-whitebox.xml
+          htmlcov/
+          junit-backend.xml
           coverage-integration.xml
           htmlcov/
           junit-backend.xml
