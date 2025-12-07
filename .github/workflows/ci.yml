@@ -1,10 +1,15 @@
 name: Saleor CI Pipeline (Simplified)
 
+# DISABLED - Using complete-cicd-pipeline.yml instead
+# This workflow is disabled to prevent duplicate pipeline runs
+# Uncomment below if you need to run this workflow separately
+# on:
+#   push:
+#     branches: [ main, master, develop ]
+#   pull_request:
+#     branches: [ main, master, develop ]
 on:
-  push:
-    branches: [ main, master, develop ]
-  pull_request:
-    branches: [ main, master, develop ]
+  workflow_dispatch:  # Only allow manual trigger
 
 env:
   PYTHON_VERSION: '3.12'

@@ -1,26 +1,31 @@
 name: Tests & Linters
 
+# DISABLED - Tests and linters are included in complete-cicd-pipeline.yml
+# This workflow is disabled to prevent duplicate runs
+# Uncomment below if you need to run this workflow separately
+# on:
+#   pull_request:
+#     types: [ opened, synchronize, reopened ]
+#     paths:
+#       - "**.py"
+#       - Dockerfile
+#       - "saleor/**"
+#       - .github/workflows/tests-and-linters.yml
+#       - pyproject.toml
+#       - uv.lock
+#   push:
+#     branches:
+#       - main
+#       - ci/*
+#     paths:
+#       - "**.py"
+#       - Dockerfile
+#       - "saleor/**"
+#       - .github/workflows/tests-and-linters.yml
+#       - pyproject.toml
+#       - uv.lock
 on:
-  pull_request:
-    types: [ opened, synchronize, reopened ]
-    paths:
-      - "**.py"
-      - Dockerfile
-      - "saleor/**"
-      - .github/workflows/tests-and-linters.yml
-      - pyproject.toml
-      - uv.lock
-  push:
-    branches:
-      - main
-      - ci/*
-    paths:
-      - "**.py"
-      - Dockerfile
-      - "saleor/**"
-      - .github/workflows/tests-and-linters.yml
-      - pyproject.toml
-      - uv.lock
+  workflow_dispatch:  # Only allow manual trigger
 
 env:
   BENCH_PATH: ./queries-results.json

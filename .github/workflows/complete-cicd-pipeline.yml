@@ -238,22 +238,24 @@ jobs:
           docker tag ${DOCKER_USER}/${{ env.PROJECT_NAME }}:${{ github.sha }} ${DOCKER_USER}/${{ env.PROJECT_NAME }}:latest
         fi
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
     
     - name: "🐳 Build - Push Docker Image to Registry"
       if: |
         github.event_name == 'push' && 
         (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
       continue-on-error: true
+      env:
+        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKER_HUB_TOKEN }}
       run: |
-        DOCKER_USER="${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}"
-        if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u ${DOCKER_USER} --password-stdin
+        if [ -n "$DOCKER_TOKEN" ]; then
+          echo "$DOCKER_TOKEN" | docker login docker.io -u ${DOCKER_USER} --password-stdin
           docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}:${{ github.sha }}
           docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}:latest
           echo "✅ Docker image pushed to registry"
         else
-          echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker push"
+          echo "⚠️ DOCKERHUB_TOKEN/DOCKER_HUB_TOKEN not set, skipping Docker push"
         fi
     
     - name: "💾 Build - Save Artifacts"
@@ -273,7 +275,7 @@ jobs:
         echo "## Build Stage Summary" >> $GITHUB_STEP_SUMMARY
         echo "- **Python Version:** ${{ env.PYTHON_VERSION }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Node.js Version:** ${{ env.NODE_VERSION }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **Docker Image:** ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}:${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Docker Image:** ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}:${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Build Time:** $(date)" >> $GITHUB_STEP_SUMMARY
         echo "✅ Build stage completed successfully"
 
@@ -587,16 +589,20 @@ jobs:
     
     - name: "🐳 Login to Docker Hub"
       continue-on-error: true
+      env:
+        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKER_HUB_TOKEN }}
       run: |
-        if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }} --password-stdin
+        if [ -n "$DOCKER_TOKEN" ]; then
+          echo "$DOCKER_TOKEN" | docker login docker.io -u ${DOCKER_USER} --password-stdin
+          echo "✅ Successfully logged in to Docker Hub"
         else
-          echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker login"
+          echo "⚠️ DOCKERHUB_TOKEN/DOCKER_HUB_TOKEN not set, skipping Docker login"
         fi
     
     - name: "🐳 Build Staging Docker Image"
       run: |
-        DOCKER_USER="${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}"
+        DOCKER_USER="${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}"
         if [ -f "Dockerfile" ]; then
           docker build -t ${DOCKER_USER}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }} .
           docker tag ${DOCKER_USER}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }} ${DOCKER_USER}/${{ env.PROJECT_NAME }}-staging:latest
@@ -607,21 +613,23 @@ jobs:
     
     - name: "🐳 Push Staging Docker Image"
       continue-on-error: true
+      env:
+        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKER_HUB_TOKEN }}
       run: |
-        if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          DOCKER_USER="${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}"
+        if [ -n "$DOCKER_TOKEN" ]; then
           docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }}
           docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}-staging:latest
           echo "✅ Staging Docker image pushed"
         else
-          echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker push"
+          echo "⚠️ DOCKERHUB_TOKEN/DOCKER_HUB_TOKEN not set, skipping Docker push"
         fi
     
     - name: "🚀 Deploy to Staging Environment"
       continue-on-error: true
       run: |
         echo "Deploying to staging environment..."
-        echo "Docker Image: ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }}"
+        echo "Docker Image: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }}"
         echo ""
         echo "⚠️ Staging deployment would happen here"
         echo "In production, this would:"
@@ -657,7 +665,7 @@ jobs:
     - name: "📊 Staging Summary"
       run: |
         echo "## Staging Stage Summary" >> $GITHUB_STEP_SUMMARY
-        echo "- **Docker Image:** ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Docker Image:** ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-staging:${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Deployment Time:** $(date)" >> $GITHUB_STEP_SUMMARY
         echo "- **Status:** Deployed to staging (simulated)" >> $GITHUB_STEP_SUMMARY
         echo "✅ Staging stage completed successfully"
@@ -689,11 +697,15 @@ jobs:
     
     - name: "🐳 Login to Docker Hub"
       continue-on-error: true
+      env:
+        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKER_HUB_TOKEN }}
       run: |
-        if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }} --password-stdin
+        if [ -n "$DOCKER_TOKEN" ]; then
+          echo "$DOCKER_TOKEN" | docker login docker.io -u ${DOCKER_USER} --password-stdin
+          echo "✅ Successfully logged in to Docker Hub"
         else
-          echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker login"
+          echo "⚠️ DOCKERHUB_TOKEN/DOCKER_HUB_TOKEN not set, skipping Docker login"
         fi
     
     - name: "🐳 Build Production Docker Image"
@@ -707,25 +719,27 @@ jobs:
           echo "⚠️ Dockerfile not found, skipping Docker build"
         fi
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
     
     - name: "🐳 Push Production Docker Image"
       continue-on-error: true
+      env:
+        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKER_HUB_TOKEN }}
       run: |
-        if [ -n "${{ secrets.DOCKER_HUB_TOKEN }}" ]; then
-          DOCKER_USER="${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}"
+        if [ -n "$DOCKER_TOKEN" ]; then
           docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}-prod:${{ github.sha }}
           docker push ${DOCKER_USER}/${{ env.PROJECT_NAME }}-prod:latest
           echo "✅ Production Docker image pushed"
         else
-          echo "⚠️ DOCKER_HUB_TOKEN not set, skipping Docker push"
+          echo "⚠️ DOCKERHUB_TOKEN/DOCKER_HUB_TOKEN not set, skipping Docker push"
         fi
     
     - name: "🌐 Deploy to Production Environment"
       continue-on-error: true
       run: |
         echo "Deploying to production environment..."
-        echo "Docker Image: ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-prod:${{ github.sha }}"
+        echo "Docker Image: ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-prod:${{ github.sha }}"
         echo ""
         echo "⚠️ Production deployment would happen here"
         echo "In production, this would:"
@@ -769,7 +783,7 @@ jobs:
     - name: "📊 Production Deployment Summary"
       run: |
         echo "## Production Deployment Summary" >> $GITHUB_STEP_SUMMARY
-        echo "- **Docker Image:** ${{ secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-prod:${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Docker Image:** ${{ secrets.DOCKERHUB_USERNAME || secrets.DOCKER_HUB_USERNAME || 'haroon5295' }}/${{ env.PROJECT_NAME }}-prod:${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Deployment Time:** $(date)" >> $GITHUB_STEP_SUMMARY
         echo "- **Status:** Deployed to production (simulated)" >> $GITHUB_STEP_SUMMARY
         echo "- **Monitoring:** Enabled (simulated)" >> $GITHUB_STEP_SUMMARY
