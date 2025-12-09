@@ -1,0 +1,173 @@
+
+> saleor@3.23.0-a.0 cypress:run
+> cypress run
+
+
+DevTools listening on ws://127.0.0.1:33667/devtools/browser/d10c5220-5446-463b-8d78-7a0b90735d01
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.7.1                                                                         │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v20.19.6 (/home/haroon/.nvm/versions/node/v20.19.6/bin/node)                   │
+  │ Specs:          18 found (accessibility.cy.js, auth_navigation.cy.js, catalog.cy.js, customer. │
+  │                 cy.js, dashboard.cy.js, discounts.cy.js, forms.cy.js, fullfillment.cy.js, grap │
+  │                 hql-api.cy.js, login.cy.js, modeling.cy.js, navigation.cy.js, notifications.cy │
+  │                 .js, orders.cy.js, prod...)                                                    │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  │ Experiments:    experimentalMemoryManagement=true                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  accessibility.cy.js                                                            (1 of 18)
+
+
+  Accessibility
+    Keyboard Navigation
+      (Attempt 1 of 3) should allow tab navigation through form fields
+      (Attempt 2 of 3) should allow tab navigation through form fields
+      1) "before each" hook for "should allow tab navigation through form fields"
+
+
+  0 passing (2m)
+  1 failing
+
+  1) Accessibility
+       Keyboard Navigation
+         "before each" hook for "should allow tab navigation through form fields":
+     AssertionError: Timed out retrying after 15000ms: Expected to find element: `input[name="email"], input[type="email"]`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Accessibility`
+      at Context.eval (webpack://saleor/./cypress/support/commands.js:96:9)
+      at getRet (http://localhost:9000/__cypress/runner/cypress_runner.js:122460:20)
+      at tryCatcher (http://localhost:9000/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:9000/__cypress/runner/cypress_runner.js:4285:29)
+      at Context.thenFn (http://localhost:9000/__cypress/runner/cypress_runner.js:122471:66)
+      at Context.then (http://localhost:9000/__cypress/runner/cypress_runner.js:122722:21)
+      at wrapped (http://localhost:9000/__cypress/runner/cypress_runner.js:145818:19)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        7                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      6                                                                                │
+  │ Screenshots:  3                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     1 minute, 33 seconds                                                             │
+  │ Spec Ran:     accessibility.cy.js                                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/haroon/SQE/SQE_Project_Saleor/cypress/screenshots/accessibility.cy.js/Acce     (1280x720)
+     ssibility -- Keyboard Navigation -- should allow tab navigation through form fie               
+     lds (failed).png                                                                               
+  -  /home/haroon/SQE/SQE_Project_Saleor/cypress/screenshots/accessibility.cy.js/Acce     (1280x720)
+     ssibility -- Keyboard Navigation -- should allow tab navigation through form fie               
+     lds (failed) (attempt 2).png                                                                   
+  -  /home/haroon/SQE/SQE_Project_Saleor/cypress/screenshots/accessibility.cy.js/Acce     (1280x720)
+     ssibility -- should allow tab navigation through form fields -- before each hook               
+      (failed) (attempt 3).png                                                                      
+
+
+  (Video)
+
+  -  Video output: /home/haroon/SQE/SQE_Project_Saleor/cypress/videos/accessibility.cy.js.mp4
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  auth_navigation.cy.js                                                          (2 of 18)
+
+
+  Saleor Authentication & Dashboard Navigation
+    ✓ renders Sign In page with required fields (7569ms)
+    ✓ shows validation errors when submitting empty credentials (4503ms)
+    ✓ rejects invalid credentials and stays on Sign In page (5288ms)
+
+
+  3 passing (18s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      3                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     17 seconds                                                                       │
+  │ Spec Ran:     auth_navigation.cy.js                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Video output: /home/haroon/SQE/SQE_Project_Saleor/cypress/videos/auth_navigation.cy.js.mp4
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  catalog.cy.js                                                                  (3 of 18)
+
+
+  Catalog – Navigation
+
+We detected that the Electron Renderer process just crashed.
+
+We have failed the current spec but will continue running the next spec.
+
+This can happen for a number of different reasons.
+
+If you're running lots of tests on a memory intense application.
+  - Try increasing the CPU/memory on the machine you're running on.
+  - Try enabling experimentalMemoryManagement in your config file.
+  - Try lowering numTestsKeptInMemory in your config file during 'cypress open'.
+
+You can learn more here:
+
+https://on.cypress.io/renderer-process-crashed
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        24                                                                               │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      23                                                                               │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     12 seconds                                                                       │
+  │ Spec Ran:     catalog.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Video output: /home/haroon/SQE/SQE_Project_Saleor/cypress/videos/catalog.cy.js.mp4
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  customer.cy.js                                                                 (4 of 18)
+
+
+  Customers – list, details, create & delete
+    (Attempt 1 of 3) shows Customers list with key columns and at least one customer
+    (Attempt 2 of 3) shows Customers list with key columns and at least one customer
